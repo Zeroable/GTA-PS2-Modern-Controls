@@ -1,368 +1,168 @@
-# GTA: San Andreas PS2 Modern Controls Patch
+# GTA-PS2-Modern-Controls
 
-A PCSX2 `.pnach` controls patch for **Grand Theft Auto: San Andreas** on PlayStation 2.
+Modern controller layouts for the original PlayStation 2 versions of *Grand Theft Auto III*, *Grand Theft Auto: Vice City*, and *Grand Theft Auto: San Andreas* when played through PCSX2 or ARMSX2.
 
-This patch modernizes the PS2 control layout by remapping vehicle acceleration/braking and several context-specific controls while keeping the original game ISO untouched.
+The **Definitive Edition Controls** layouts move common driving, aiming, firing, weapon-selection, and camera actions to more familiar modern-controller positions while preserving game-specific actions where needed.
 
-The patch automatically changes behavior when CJ enters or exits vehicles. You do **not** need to manually switch controller profiles or control schemes in PCSX2.
+Created and tested by **Zeroable**.
 
-## Why This Patch Exists
+## Why these patches exist
 
-The original PS2 version of *GTA: San Andreas* was designed around the DualShock 2 controller, which had pressure-sensitive face buttons. On original hardware, the Cross and Square buttons could detect how hard they were being pressed, allowing for more gradual acceleration and braking.
+The original PS2 games were designed around the DualShock 2 controller, which had pressure-sensitive face buttons. Cross and Square could detect how hard they were pressed, allowing gradual acceleration and braking instead of simple on/off input.
 
-Modern controllers usually place analog acceleration and braking on the trigger buttons instead. When playing the PS2 version through PCSX2 with a modern controller, the original Cross/Square vehicle controls can feel awkward. Depending on the controller, adapter, or input setup, driving may behave more like the car is always going “pedal to the metal.”
+Modern controllers normally place analog acceleration and braking on R2 and L2. These patches move the games' native pressure-sensitive acceleration and braking actions to those triggers. When the controller and emulator provide analog trigger values, a light press can produce gentle input and a full press can produce full acceleration or braking. A controller configured for digital-only trigger input will still behave like an on/off button.
 
-This patch helps preserve the feel and playability of the PS2 version by moving acceleration and braking-style controls to the shoulder/trigger positions used by modern controllers, while keeping the original game ISO untouched.
+The patches automatically change control behavior when entering or leaving a vehicle. San Andreas also selects the appropriate vehicle layout for standard vehicles, bikes, and aircraft. No manual controller-profile switching is required during play.
 
-## Target Version
+## Emulator testing
 
-This patch is for:
+These layouts have been tested on:
 
-| Item | Value |
-|---|---|
-| Game | Grand Theft Auto: San Andreas |
-| Platform | PlayStation 2 |
-| Region | NTSC-U |
-| Game ID | SLUS-20946 |
-| CRC | 399A49CA |
-| Emulators tested | PCSX2, AetherSX2, ARMSX2 |
+- **PCSX2 2.8.0**
+- **ARMSX2**
 
-Other versions, regions, Greatest Hits/3.00 builds, PAL releases, and modified ISOs are not currently supported.
+## Supported game versions
 
-## What This Is
+| Game | Region and release | PCSX2 CRC | File |
+| --- | --- | --- | --- |
+| Grand Theft Auto III | NTSC-U, SLUS-20062 | `5E115FB6` | `5E115FB6.pnach` |
+| Grand Theft Auto: Vice City | NTSC-U Day 1, SLUS-20552 | `20B19E49` | `20B19E49.pnach` |
+| Grand Theft Auto: San Andreas | NTSC-U, SLUS-20946 | `399A49CA` | `399A49CA.pnach` |
 
-This is a PCSX2 cheat/patch file that remaps controller inputs at runtime.
-
-It does **not**:
-
-- Modify the game ISO
-- Include game files
-- Include Rockstar/Take-Two assets
-- Require a patched disc image
-
-It does:
-
-- Use PCSX2’s `.pnach` cheat system
-- Remap controller inputs while the game is running
-- Automatically change control behavior when entering or exiting vehicles
-- Provide optional modules that can be enabled or disabled from PCSX2’s cheat menu
-
-## Included Versions
-
-Choose one of the included `.pnach` files.
-
-| File | Description |
-|---|---|
-| `399A49CA_Basic_Cross_and_R2_and_Square_and_L2_Swap_Plus_Remaps.pnach` | Recommended version. Includes the basic Cross/R2 and Square/L2 vehicle swap plus optional context-specific modules. |
-| `399A49CA_Basic_Cross_and_R2_and_Square_and_L2_Swap_First_Working_Version.pnach` | First working version. Only swaps Cross with R2 and Square with L2 while in a vehicle. Simpler and less invasive. |
+These files are CRC-specific. PCSX2 will not apply a file to a different game revision with another CRC.
 
 ## Installation
 
-1. Download the `.pnach` file you want to use.
-2. Rename the chosen file to:
+1. Download the `.pnach` file matching your game and CRC from `Definitive Edition Controls`.
+2. Place it in PCSX2's `cheats` folder.
+3. Enable cheats in PCSX2.
+4. Open the game's cheat list and enable the desired groups.
+5. Use the game's original PS2 default control scheme. A different in-game control type can change the results.
+
+For the complete layout, enable all three groups:
+
+- **Group 1 — required:** modern vehicle controls and the shared control hook.
+- **Group 2 — optional:** modern on-foot controls. Leave this off to keep the original on-foot layout.
+- **Group 3 — optional:** restores native input while the pause/menu screen is open. This group requires Group 1.
 
-```text
-399A49CA.pnach
-```
-
-3. Place it in your PCSX2 `cheats` folder.
-
-Depending on your PCSX2 setup, the cheats folder is usually found in one of these locations:
-
-```text
-Documents\PCSX2\cheats
-```
-
-or inside your portable PCSX2 folder:
-
-```text
-PCSX2\cheats
-```
-
-4. Start GTA: San Andreas.
-5. In PCSX2, enable cheats.
-6. Open the cheats list and enable the modules you want.
-
-## Cheat Modules
-
-The following modules apply to the recommended “Plus Remaps” version.
-
-### 1 REQUIRED - Basic Vehicle Swap Core
-
-This module is required for the optional modules to work.
-
-In vehicles, it applies the basic modern-style swap:
-
-```text
-Physical R2     -> native Cross
-Physical L2     -> native Square
-Physical Cross  -> native R2
-Physical Square -> native L2
-```
-
-This makes R2/L2 behave more like modern accelerate/brake controls.
-
-Leave this enabled while playing.
-
----
-
-### 2 OPTIONAL - Universal In-Vehicle D-pad Radio/Look Controls
-
-Applies to vehicles, including turreted/weaponized vehicles.
-
-```text
-Physical D-pad Up    -> native D-pad Down / next radio station
-Physical D-pad Left  -> native L2 / look left
-Physical D-pad Right -> native R2 / look right
-Physical D-pad Down  -> native L2 + native R2 / look backward
-```
-
----
-
-### 3 OPTIONAL - Bicycle Special Controls
-
-Applies to:
-
-```text
-BMX
-Bike
-Mountain Bike
-```
-
-Behavior:
-
-```text
-Physical R2 -> native Cross
-Physical L2 -> native Square
-Physical Cross still works
-Physical Square still works
-```
-
-This keeps bicycles usable while moving acceleration/braking behavior toward the shoulder buttons.
-
-Enable module 2 separately if you want the universal D-pad look/radio behavior.
-
----
-
-### 4 OPTIONAL - Aircraft Special Controls
-
-Applies to aircraft and helicopters.
-
-This module remaps aircraft controls so shoulder and face-button behavior is more modernized.
-
-General behavior:
-
-```text
-Physical Square -> native L1
-Physical Cross  -> native R1
-Physical R2     -> native Cross
-Physical L2     -> native Square
-Physical R1     -> native R2
-Physical L1     -> native L2
-```
-
----
-
-### 5 OPTIONAL - Alternate Controls for Cars and Normal Ground Vehicles
-
-Applies alternate controls to cars and normal ground vehicles.
-
-Motorcycles, ATV, boats, and hovercraft are not included unless options 6 and/or 7 are also enabled.
-
-Turreted or weaponized vehicles are excluded from this alternate-control group so their vehicle weapon and secondary-fire controls stay closer to the stock/basic layout.
-
-Excluded vehicles:
-
-```text
-407 Fire Truck
-430 Predator
-432 Rhino
-544 Fire Truck ladder variant
-564 RC Tiger
-601 S.W.A.T.
-```
-
----
-
-### 6 OPTIONAL - Include Motorcycles and ATV in Alternate Controls
-
-Requires option 5.
-
-This extends the option 5 alternate controls to motorcycles and ATV-style vehicles.
-
-Leave this disabled to keep motorcycles and ATV on the basic vehicle layout.
-
----
-
-### 7 OPTIONAL - Include Boats and Hovercraft in Alternate Controls
-
-Requires option 5.
-
-This extends the option 5 alternate controls to boats and the Vortex hovercraft.
-
-The Predator is excluded because it has built-in guns.
-
----
-
-### 8 OPTIONAL - Auto Fire Add-on for Alternate Controls
-
-Requires option 5.
-
-This is an add-on for the alternate vehicle controls. It is no longer a separate “choose this or that” alternate-control option.
-
-With option 8 enabled, vehicles routed through option 5, 6, and/or 7 use Auto Fire behavior.
-
-Auto Fire behavior:
-
-```text
-Physical R1 -> native R2 + Circle
-Physical L1 -> native L2 + Circle
-```
-
-Use option 5 by itself for alternate controls without Auto Fire.
-
-Use option 5 plus option 8 for alternate controls with Auto Fire.
-
----
-
-### 9 OPTIONAL - On-Foot Shoulder Swap
-
-This module changes only on-foot shoulder behavior.
-
-Current behavior:
-
-```text
-Physical L1 -> native L2
-Physical R1 -> native R2
-Physical L2 -> native L1
-Physical R2 -> native R1
-```
-
-## Known Limitations
-
-### Menus Are Not Fully Guarded
-
-This version is based on the most stable gameplay build.
-
-Some menu screens may still receive remapped inputs, especially if shoulder buttons are used for menu navigation, zoom, or page switching.
-
-Menu-safe experimental builds were tested, but they could cause side effects such as:
-
-```text
-Temporary control dropouts while driving
-Delayed remap activation after entering a vehicle
-Brake-light/controller-state flicker
-```
-
-Because of that, the stable release does not include the experimental menu guard.
-
-## Mod Compatibility Notes
-
-This patch has also been tested with **PS2 Project Kaizo 2.2**, which is based on the same NTSC-U 1.03 version of *GTA: San Andreas*.
-
-Keep in mind that some Project Kaizo shortcuts use the direction buttons. If you are in a vehicle and have **Option 2 - Universal In-Vehicle D-pad Radio/Look Controls** enabled, the D-pad does not behave exactly like stock while driving.
-
-With option 2 enabled, the following inputs are changed while in a vehicle:
-
-- D-pad Left also sends the vehicle look-left input.
-- D-pad Right also sends the vehicle look-right input.
-- D-pad Down sends both look-left and look-right for rear view.
-- D-pad Up is changed for radio station behavior.
-
-Because of this, Project Kaizo shortcuts that rely on the direction buttons may not work correctly while you are in a vehicle.
-
-Workarounds:
-
-- Turn off option 2.
-- Get out of the vehicle before using the shortcut.
-- Use the shortcut while on foot.
-
-This is not a bug with PS2 Project Kaizo or the base patch. It is a side effect of combining Project Kaizo’s D-pad shortcuts with this patch’s optional in-vehicle D-pad remaps.
-
-### PCSX2 Only
-
-This release is currently intended for PCSX2.
-
-Real PS2 hardware / OPL / PS2RD support is not confirmed.
-
-A real-hardware version may be possible later, but it should be considered experimental unless tested on actual PS2 hardware.
-
-### Version-Specific
-
-This patch is built for:
-
-```text
-SLUS-20946
-CRC 399A49CA
-```
-
-It will not automatically work on other regions or revisions.
-
-## Troubleshooting
-
-### The Cheat Does Not Appear in PCSX2
-
-Make sure the file is named exactly:
-
-```text
-399A49CA.pnach
-```
-
-and that it is in the PCSX2 `cheats` folder.
-
-Also make sure cheats are enabled in PCSX2.
-
-### The Controls Do Not Change
-
-Check that option 1 is enabled.
-
-Most optional modules depend on the required core module.
-
-### Motorcycles, Boats, or Auto Fire Do Not Change
-
-Options 6, 7, and 8 depend on option 5.
-
-Use this setup:
-
-```text
-5 ON  = alternate controls for cars and normal ground vehicles
-6 ON  = also include motorcycles and ATV
-7 ON  = also include boats and hovercraft
-8 ON  = add Auto Fire to the alternate controls
-```
-
-### Menus Behave Oddly
-
-This can happen because this patch prioritizes stable gameplay controls over menu-specific guarding.
-
-Disable optional modules temporarily if a menu screen becomes difficult to use.
-
-### Project Kaizo Shortcuts Do Not Work in Vehicles
-
-Turn off option 2 or use the shortcut while on foot.
-
-Option 2 changes D-pad behavior while driving, which can interfere with Project Kaizo shortcuts that use the direction buttons.
+## GTA III and Vice City
+
+These two games use the same overall layout.
+
+### On foot
+
+| Button | Action |
+| --- | --- |
+| L2 | Target / aim |
+| R2 | Attack / fire |
+| Circle | Attack / fire |
+| L1 | Next weapon |
+| R1 | Reset camera |
+| D-pad Left | Previous weapon |
+| D-pad Right | Next weapon |
+| R3 | Native action |
+
+Native D-pad Up and Down are suppressed while the on-foot group is active. Group 3 keeps pause and menu navigation native.
+
+### In vehicles
+
+| Button | Action |
+| --- | --- |
+| L2 | Brake / reverse |
+| R2 | Accelerate |
+| L1 | Vehicle fire |
+| R1 | Handbrake |
+| Cross | Handbrake |
+| Square | Look left |
+| Circle | Look right |
+| R3 | Look behind |
+| D-pad Up | Vehicle sub-mission or special action |
+| D-pad Right | Next radio station |
+
+Native D-pad Left and Down are suppressed while the vehicle group is active.
+
+Cross has no vehicle assignment in the Definitive Edition layout. It is mapped here as a second handbrake button alongside R1, keeping the driving layout consistent with *Grand Theft Auto IV*.
+
+## San Andreas
+
+San Andreas uses separate handling for standard vehicles, bikes, and aircraft. It also provides a native-input override for interactions that require the original D-pad.
+
+### Important: hold Select for native vehicle controls
+
+While in any vehicle, hold **Select** to temporarily restore the original controls. This restores native D-pad input for prompts that require a directional answer, including date prompts that ask for a yes/no response.
+
+Release Select to return to the modern layout.
+
+### On foot
+
+| Button | Action |
+| --- | --- |
+| L2 | Aim |
+| R2 | Fire |
+| L1 | Previous weapon |
+| R1 | Next weapon |
+| D-pad | Native actions |
+| R3 | Native look-behind action |
+
+The most important difference from GTA III and Vice City is **R1**: it resets the camera in those games, but selects the **next weapon** in San Andreas.
+
+### Standard vehicles
+
+| Button | Action |
+| --- | --- |
+| L2 | Brake / reverse |
+| R2 | Accelerate |
+| L1 | Main fire |
+| R1 | Handbrake |
+| Cross | Handbrake |
+| Square | Look left |
+| Circle | Look right |
+| R3 | Look behind |
+| D-pad Up | Sub-mission, landing gear, or special vehicle action |
+| D-pad Down | Alternate fire / turbo |
+| D-pad Left | Previous radio station |
+| D-pad Right | Next radio station |
+
+Cross has no vehicle assignment in the Definitive Edition layout. It is mapped here as a second handbrake button alongside R1, keeping the driving layout consistent with *Grand Theft Auto IV*.
+
+### Bikes
+
+| Button | Action |
+| --- | --- |
+| R2 | Accelerate |
+| L2 | Brake |
+| Cross | Native accelerate action |
+| Square | Native brake action |
+| D-pad Left | Look left |
+| D-pad Right | Look right |
+| R3 | Look behind |
+
+Bike controls intentionally take a small liberty with the standard layout. R2 and L2 provide pressure-sensitive acceleration and braking when analog trigger values are available, while Cross and Square remain usable for their native bike actions. For bicycles, repeatedly tapping Cross may still be preferable when pedaling hard or building speed quickly.
+
+### Aircraft
+
+Aircraft preserve native L1 and R1 so their original special functions remain available.
+
+| Button | Action sent to the game |
+| --- | --- |
+| L1 | Native L1 |
+| R1 | Native R1 |
+| R2 | Native Cross |
+| L2 | Native Square |
+| Cross | Native Circle / main fire |
+| Square | Rudder left |
+| Circle | Rudder right |
+| R3 | Look behind |
+| D-pad Up | Native R3 / landing gear or special action |
+| D-pad Down | Native L1 / alternate fire |
+| D-pad Left | Native D-pad Up |
+| D-pad Right | Native D-pad Down |
+
+This layout applies to aircraft with and without weapons, including planes, helicopters, and the Hydra.
 
 ## Credits
 
-Controls design, testing, and project release by **Zeroable**.
+- Project, configurations, testing, and public release: **Zeroable**
+- Shared hook foundation: **PS2 Controller Remapper by pelvicthrustman**
 
-Patch assembly/debugging assistance from **ChatGPT**.
-
-Portions of the controller hook structure were generated with **PS2 Controller Remapper by pelvicthrustman**.
-
-## Disclaimer
-
-This is an unofficial fan-made controls/accessibility/preservation patch.
-
-This project is not affiliated with, endorsed by, or sponsored by Rockstar Games, Take-Two Interactive, Sony, or the PCSX2 project.
-
-Grand Theft Auto: San Andreas is property of Rockstar Games / Take-Two Interactive.
-
-This repository does not contain any game files, game assets, disc images, BIOS files, or copyrighted Rockstar/Take-Two content.
-
-## License
-
-This project is released under the MIT License.
-
-See `LICENSE` for details.
+This is a community project and is not affiliated with Rockstar Games, Sony, or the PCSX2 project.
