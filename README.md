@@ -4,10 +4,6 @@ Modern controller layouts for the original PlayStation 2 versions of *Grand Thef
 
 The **Definitive Edition Controls** layouts move common driving, aiming, firing, weapon-selection, and camera actions to more familiar modern-controller positions while preserving game-specific actions where needed.
 
-Created and tested by **Zeroable**.
-
-## Why these patches exist
-
 The original PS2 games were designed around the DualShock 2 controller, which had pressure-sensitive face buttons. Cross and Square could detect how hard they were pressed, allowing gradual acceleration and braking instead of simple on/off input.
 
 Modern controllers normally place analog acceleration and braking on R2 and L2. These patches move the games' native pressure-sensitive acceleration and braking actions to those triggers. When the controller and emulator provide analog trigger values, a light press can produce gentle input and a full press can produce full acceleration or braking. A controller configured for digital-only trigger input will still behave like an on/off button.
@@ -26,7 +22,7 @@ These layouts have been tested on:
 | Game | Region and release | PCSX2 CRC | File |
 | --- | --- | --- | --- |
 | Grand Theft Auto III | NTSC-U, SLUS-20062 | `5E115FB6` | `5E115FB6.pnach` |
-| Grand Theft Auto: Vice City | NTSC-U Day 1, SLUS-20552 | `20B19E49` | `20B19E49.pnach` |
+| Grand Theft Auto: Vice City | NTSC-U, SLUS-20552 | `20B19E49` | `20B19E49.pnach` |
 | Grand Theft Auto: San Andreas | NTSC-U, SLUS-20946 | `399A49CA` | `399A49CA.pnach` |
 
 These files are CRC-specific. PCSX2 will not apply a file to a different game revision with another CRC.
