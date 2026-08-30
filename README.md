@@ -60,7 +60,6 @@ These two games use the same overall layout.
 | R1 | Reset camera |
 | D-pad Left | Previous weapon |
 | D-pad Right | Next weapon |
-| R3 | Native action |
 
 Native D-pad Up and Down are suppressed while the on-foot group is active. Group 3 keeps pause and menu navigation native.
 
@@ -79,7 +78,7 @@ Native D-pad Up and Down are suppressed while the on-foot group is active. Group
 | D-pad Up | Vehicle sub-mission or special action |
 | D-pad Right | Next radio station |
 
-Native D-pad Left and Down are suppressed while the vehicle group is active.
+Native D-pad Left and Down are suppressed while the vehicle group is active. In case you are asked a Yes or No question while in a car. Prevents softlock.
 
 Cross has no vehicle assignment in the Definitive Edition layout. It is mapped here as a second handbrake button alongside R1, keeping the driving layout consistent with *Grand Theft Auto IV*.
 
@@ -102,7 +101,6 @@ Release Select to return to the modern layout.
 | L1 | Previous weapon |
 | R1 | Next weapon |
 | D-pad | Native actions |
-| R3 | Native look-behind action |
 
 The most important difference from GTA III and Vice City is **R1**: it resets the camera in those games, but selects the **next weapon** in San Andreas.
 
