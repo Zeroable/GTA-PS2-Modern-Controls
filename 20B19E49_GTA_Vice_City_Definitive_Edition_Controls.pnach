@@ -1,0 +1,181 @@
+gametitle=Grand Theft Auto: Vice City (NTSC-U Day 1 / CRC 20B19E49)
+comment=Definitive Edition-style controls for Grand Theft Auto: Vice City.
+comment=Built for the original PS2 default control scheme. Changing the in-game control type can produce different results.
+comment=Enable group 1 for vehicle controls, group 2 for on-foot controls, and group 3 for native pause/menu input.
+comment=Vehicle layout: L2 brake, R2 accelerate, L1 fire, R1 handbrake, Cross handbrake, Square look left, Circle look right, R3 look behind, D-pad Up vehicle sub-mission/misc, D-pad Right next station/radio.
+comment=On-foot layout: L2 targeting, R2 attack, Circle attack, L1 next weapon, R1 camera reset, D-pad Left previous weapon, D-pad Right next weapon, and R3 native.
+comment=The pause/menu guard restores native controls while a menu is open.
+comment=Target: NTSC-U Day 1 SLUS-20552, CRC 20B19E49.
+comment=Public credit: Zeroable.
+
+[Cheats\1 REQUIRED - Definitive Edition vehicle controls]
+description=Required vehicle controls. In vehicles: L2 brake, R2 accelerate, L1 fire, R1 or Cross handbrake, Square/Circle look left/right, R3 looks behind, D-pad Up activates the vehicle sub-mission or special action, and D-pad Right selects the next radio station. Native D-pad Left/Down are suppressed during gameplay. On-foot controls remain stock unless group 2 is enabled.
+author=Zeroable
+
+// Shared hook entry from PS2 Controller Remapper.
+patch=1,EE,200FD050,extended,00C0C821
+patch=1,EE,200FD054,extended,08048871
+patch=1,EE,200FD058,extended,24030070
+
+// Definitive Edition-style in-vehicle controls.
+patch=1,EE,200FD05C,extended,87240002
+patch=1,EE,200FD060,extended,3485EFF4
+patch=1,EE,200FD064,extended,93260012
+patch=1,EE,200FD068,extended,93270013
+patch=1,EE,200FD06C,extended,93280010
+patch=1,EE,200FD070,extended,93290011
+patch=1,EE,200FD074,extended,932A000E
+patch=1,EE,200FD078,extended,932B000F
+patch=1,EE,200FD07C,extended,932C000D
+patch=1,EE,200FD080,extended,932D000A
+patch=1,EE,200FD084,extended,932E0008
+patch=1,EE,200FD088,extended,240F00FF
+patch=1,EE,200FD08C,extended,A3200008
+patch=1,EE,200FD090,extended,A3200009
+patch=1,EE,200FD094,extended,A320000A
+patch=1,EE,200FD098,extended,A320000B
+patch=1,EE,200FD09C,extended,A3200010
+patch=1,EE,200FD0A0,extended,A3200011
+patch=1,EE,200FD0A4,extended,A3200012
+patch=1,EE,200FD0A8,extended,A3200013
+patch=1,EE,200FD0AC,extended,A320000D
+patch=1,EE,200FD0B0,extended,A320000E
+patch=1,EE,200FD0B4,extended,A320000F
+patch=1,EE,200FD0B8,extended,30810100
+patch=1,EE,200FD0BC,extended,14200003
+patch=1,EE,200FD0C0,extended,00000000
+patch=1,EE,200FD0C4,extended,30A57FFF
+patch=1,EE,200FD0C8,extended,A326000F
+patch=1,EE,200FD0CC,extended,30810200
+patch=1,EE,200FD0D0,extended,14200003
+patch=1,EE,200FD0D4,extended,00000000
+patch=1,EE,200FD0D8,extended,30A5BFFF
+patch=1,EE,200FD0DC,extended,A327000E
+patch=1,EE,200FD0E0,extended,30810400
+patch=1,EE,200FD0E4,extended,14200003
+patch=1,EE,200FD0E8,extended,00000000
+patch=1,EE,200FD0EC,extended,30A5DFFF
+patch=1,EE,200FD0F0,extended,A328000D
+patch=1,EE,200FD0F4,extended,30810800
+patch=1,EE,200FD0F8,extended,14200003
+patch=1,EE,200FD0FC,extended,00000000
+patch=1,EE,200FD100,extended,30A5F7FF
+patch=1,EE,200FD104,extended,A3290011
+patch=1,EE,200FD108,extended,30814000
+patch=1,EE,200FD10C,extended,14200003
+patch=1,EE,200FD110,extended,00000000
+patch=1,EE,200FD114,extended,30A5F7FF
+patch=1,EE,200FD118,extended,A32A0011
+patch=1,EE,200FD11C,extended,30818000
+patch=1,EE,200FD120,extended,14200003
+patch=1,EE,200FD124,extended,00000000
+patch=1,EE,200FD128,extended,30A5FEFF
+patch=1,EE,200FD12C,extended,A32B0012
+patch=1,EE,200FD130,extended,30812000
+patch=1,EE,200FD134,extended,14200003
+patch=1,EE,200FD138,extended,00000000
+patch=1,EE,200FD13C,extended,30A5FDFF
+patch=1,EE,200FD140,extended,A32C0013
+patch=1,EE,200FD144,extended,30810004
+patch=1,EE,200FD148,extended,14200004
+patch=1,EE,200FD14C,extended,00000000
+patch=1,EE,200FD150,extended,30A5FCFF
+patch=1,EE,200FD154,extended,A32F0012
+patch=1,EE,200FD158,extended,A32F0013
+patch=1,EE,200FD15C,extended,30810010
+patch=1,EE,200FD160,extended,14200002
+patch=1,EE,200FD164,extended,00000000
+patch=1,EE,200FD168,extended,30A5FFFB
+patch=1,EE,200FD16C,extended,30810020
+patch=1,EE,200FD170,extended,14200003
+patch=1,EE,200FD174,extended,00000000
+patch=1,EE,200FD178,extended,30A5FBFF
+patch=1,EE,200FD17C,extended,A32E0010
+patch=1,EE,200FD180,extended,03E00008
+patch=1,EE,200FD184,extended,A7250002
+
+// Dynamic hook install/restore using the Vice City current vehicle pointer at 0x004B0EB4.
+// In vehicle: high halfword at 0x004B0EB6 is nonzero, so install the vehicle DE layout.
+patch=1,EE,D04B0EB6,extended,02100000
+patch=1,EE,201221BC,extended,0803F414
+patch=1,EE,2012222C,extended,0803F417
+
+// On foot: high halfword at 0x004B0EB6 is zero, so restore original game instructions unless group 2 is enabled.
+patch=1,EE,D04B0EB6,extended,02000000
+patch=1,EE,201221BC,extended,24030070
+patch=1,EE,2012222C,extended,03E00008
+
+[Cheats\2 OPTIONAL - Definitive Edition on-foot controls]
+description=Requires group 1. On foot: L2 targeting, R2 attack, Circle attack, L1 next weapon/native R2, R1 camera reset/native L1, D-pad Left previous weapon/native L2, and D-pad Right next weapon/native R2. Native D-pad Up/Down are suppressed during gameplay. R3 remains native.
+author=Zeroable
+
+// Definitive Edition-style on-foot controls.
+patch=1,EE,200FD800,extended,87240002
+patch=1,EE,200FD804,extended,34852FF0
+patch=1,EE,200FD808,extended,93260012
+patch=1,EE,200FD80C,extended,93270013
+patch=1,EE,200FD810,extended,93280010
+patch=1,EE,200FD814,extended,93290011
+patch=1,EE,200FD818,extended,932A000D
+patch=1,EE,200FD81C,extended,932B0009
+patch=1,EE,200FD820,extended,932C0008
+patch=1,EE,200FD824,extended,A3200008
+patch=1,EE,200FD828,extended,A3200009
+patch=1,EE,200FD82C,extended,A320000A
+patch=1,EE,200FD830,extended,A320000B
+patch=1,EE,200FD834,extended,A3200010
+patch=1,EE,200FD838,extended,A3200011
+patch=1,EE,200FD83C,extended,A3200012
+patch=1,EE,200FD840,extended,A3200013
+patch=1,EE,200FD844,extended,A320000D
+patch=1,EE,200FD848,extended,30810100
+patch=1,EE,200FD84C,extended,14200003
+patch=1,EE,200FD850,extended,00000000
+patch=1,EE,200FD854,extended,30A5F7FF
+patch=1,EE,200FD858,extended,A3260011
+patch=1,EE,200FD85C,extended,30810200
+patch=1,EE,200FD860,extended,14200003
+patch=1,EE,200FD864,extended,00000000
+patch=1,EE,200FD868,extended,30A5DFFF
+patch=1,EE,200FD86C,extended,A327000D
+patch=1,EE,200FD870,extended,30812000
+patch=1,EE,200FD874,extended,14200003
+patch=1,EE,200FD878,extended,00000000
+patch=1,EE,200FD87C,extended,30A5DFFF
+patch=1,EE,200FD880,extended,A32A000D
+patch=1,EE,200FD884,extended,30810400
+patch=1,EE,200FD888,extended,14200003
+patch=1,EE,200FD88C,extended,00000000
+patch=1,EE,200FD890,extended,30A5FDFF
+patch=1,EE,200FD894,extended,A3280013
+patch=1,EE,200FD898,extended,30810800
+patch=1,EE,200FD89C,extended,14200003
+patch=1,EE,200FD8A0,extended,00000000
+patch=1,EE,200FD8A4,extended,30A5FBFF
+patch=1,EE,200FD8A8,extended,A3290010
+patch=1,EE,200FD8AC,extended,30810080
+patch=1,EE,200FD8B0,extended,14200003
+patch=1,EE,200FD8B4,extended,00000000
+patch=1,EE,200FD8B8,extended,30A5FEFF
+patch=1,EE,200FD8BC,extended,A32B0012
+patch=1,EE,200FD8C0,extended,30810020
+patch=1,EE,200FD8C4,extended,14200003
+patch=1,EE,200FD8C8,extended,00000000
+patch=1,EE,200FD8CC,extended,30A5FDFF
+patch=1,EE,200FD8D0,extended,A32C0013
+patch=1,EE,200FD8D4,extended,03E00008
+patch=1,EE,200FD8D8,extended,A7250002
+
+// On-foot hook override. If group 2 is enabled and Tommy is on foot, install the hook and route to the on-foot DE body.
+patch=1,EE,D04B0EB6,extended,02000000
+patch=1,EE,201221BC,extended,0803F414
+patch=1,EE,2012222C,extended,0803F600
+
+[Cheats\3 OPTIONAL - Pause/menu native-controls guard]
+description=Requires group 1. While the pause/menu flag at 0x004B0DE8 equals 1, restore the original hook instructions so pause/menu controls stay native.
+author=Zeroable
+
+// Pause/menu guard flag: unpaused is 0x0000; paused is 0x0001.
+patch=1,EE,D04B0DE8,extended,02000001
+patch=1,EE,201221BC,extended,24030070
+patch=1,EE,2012222C,extended,03E00008
