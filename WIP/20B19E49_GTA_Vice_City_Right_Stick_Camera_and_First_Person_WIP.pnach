@@ -1,10 +1,13 @@
-gametitle=Grand Theft Auto Vice City USA v1.40 - FPS and Camera Mod
-comment=Development build: On-foot, car, motorcycle, helicopter and Skimmer Orbit validated by user. On-foot first person awaiting live test.
-comment=Select+R3 cycles Normal/Orbit/First person. Select alone cycles Orbit distance. First person currently applies on foot only.
-comment=Includes Zeroable control-remapper compatibility through the sole shared input hook. Do not enable the original remapper hooks alongside this file.
-[Cheats\Camera development - reserve 32 KiB]
-description=FPS and Camera Mod prototype. Requires full boot with 32 KiB reservation; use memory-card saves. Includes existing Zeroable controls.
-author=Camera mod development; original control remapper by Zeroable
+gametitle=Grand Theft Auto: Vice City (NTSC-U Day 1 SLUS-20552 / CRC 20B19E49)
+comment=Work in progress. Adds a right-stick Orbit camera and an on-foot first-person camera.
+comment=Select + R3 cycles Normal / Orbit / First Person. Select alone cycles Orbit distance.
+comment=Orbit camera supports on-foot, car, motorcycle, helicopter, and Skimmer gameplay. First Person currently applies on foot only.
+comment=Requires a full boot with the 32 KiB memory reservation. Use memory-card saves.
+comment=Includes the modern control remapper. Do not enable the standalone modern-control PNACH at the same time.
+comment=Control-remapping foundation based on PS2 Controller Remapper by pelvicthrustman.
+[Cheats\Right-Stick Camera and First Person - WIP]
+description=Adds a right-stick Orbit camera and on-foot first-person camera. Requires a full boot with a 32 KiB memory reservation; use memory-card saves. Includes the modern control remapper.
+author=Zeroable
 patch=2,EE,000FD05C,word,87240002
 patch=2,EE,000FD060,word,3485EFF4
 patch=2,EE,000FD064,word,93260012
