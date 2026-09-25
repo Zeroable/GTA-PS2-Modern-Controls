@@ -12,6 +12,14 @@ These PNACH patches are designed for PCSX2 and ARMSX2 and use each game's origin
 
 The **Definitive Edition-style controls** move common driving, aiming, firing, weapon-selection, and camera actions to more familiar modern-controller positions while preserving game-specific functions where necessary.
 
+## Purpose of the patches
+
+The original PS2 games were designed around the DualShock 2 controller, which had pressure-sensitive face buttons. Cross and Square could detect how hard they were pressed, allowing gradual acceleration and braking instead of simple on/off input.
+
+Modern controllers normally place analog acceleration and braking on R2 and L2. These patches move the games' native pressure-sensitive acceleration and braking actions to those triggers. When the controller and emulator provide analog trigger values, a light press can produce gentle input and a full press can produce full acceleration or braking. A controller configured for digital-only trigger input will still behave like an on/off button.
+
+*Liberty City Stories* and *Vice City Stories* use digital acceleration and braking, but use the same R2/L2 layout for consistency with the other games.
+
 ## Emulator testing
 
 These layouts have been tested on:
