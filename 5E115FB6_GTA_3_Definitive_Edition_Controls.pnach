@@ -12,12 +12,10 @@ comment=Public credit: Zeroable.
 description=Required vehicle controls. In vehicles: L2 brake, R2 accelerate, L1 fire, R1 or Cross handbrake, Square/Circle look left/right, R3 looks behind, D-pad Up activates the vehicle sub-mission or special action, and D-pad Right selects the next radio station. Native D-pad Left/Down are suppressed during gameplay. On-foot controls remain stock unless group 2 is enabled.
 author=Zeroable
 
-// Shared hook entry from PS2 Controller Remapper.
 patch=1,EE,200FD050,extended,00C0C821
 patch=1,EE,200FD054,extended,08047CBD
 patch=1,EE,200FD058,extended,24030070
 
-// Definitive Edition-style in-vehicle controls.
 patch=1,EE,200FD05C,extended,87240002
 patch=1,EE,200FD060,extended,3485EFF4
 patch=1,EE,200FD064,extended,93260012
@@ -94,13 +92,10 @@ patch=1,EE,200FD17C,extended,A32E0010
 patch=1,EE,200FD180,extended,03E00008
 patch=1,EE,200FD184,extended,A7250002
 
-// Dynamic hook install/restore using the GTA III current vehicle pointer at 0x00416A80.
-// In vehicle: high halfword at 0x00416A82 is nonzero, so install the vehicle DE layout.
 patch=1,EE,D0416A82,extended,02100000
 patch=1,EE,2011F2EC,extended,0803F414
 patch=1,EE,2011F35C,extended,0803F417
 
-// On foot: high halfword at 0x00416A82 is zero, so restore original game instructions unless group 2 is enabled.
 patch=1,EE,D0416A82,extended,02000000
 patch=1,EE,2011F2EC,extended,24030070
 patch=1,EE,2011F35C,extended,03E00008
@@ -109,7 +104,6 @@ patch=1,EE,2011F35C,extended,03E00008
 description=Requires group 1. On foot: L2 targeting, R2 attack, Circle attack, L1 next weapon/native R2, R1 camera reset/native L1, D-pad Left previous weapon/native L2, and D-pad Right next weapon/native R2. Native D-pad Up/Down are suppressed during gameplay. R3 remains native.
 author=Zeroable
 
-// Definitive Edition-style on-foot controls.
 patch=1,EE,200FD800,extended,87240002
 patch=1,EE,200FD804,extended,34852FF0
 patch=1,EE,200FD808,extended,93260012
@@ -166,7 +160,6 @@ patch=1,EE,200FD8D0,extended,A32C0013
 patch=1,EE,200FD8D4,extended,03E00008
 patch=1,EE,200FD8D8,extended,A7250002
 
-// On-foot hook override. If group 2 is enabled and Claude is on foot, install the hook and route to the on-foot DE body.
 patch=1,EE,D0416A82,extended,02000000
 patch=1,EE,2011F2EC,extended,0803F414
 patch=1,EE,2011F35C,extended,0803F600
@@ -175,7 +168,6 @@ patch=1,EE,2011F35C,extended,0803F600
 description=Requires group 1. While the pause/menu flag at 0x004169CC equals 1, restore the original hook instructions so pause/menu controls stay native.
 author=Zeroable
 
-// Pause/menu guard flag: unpaused is 0x0000; paused is 0x0001.
 patch=1,EE,D04169CC,extended,02000001
 patch=1,EE,2011F2EC,extended,24030070
 patch=1,EE,2011F35C,extended,03E00008
