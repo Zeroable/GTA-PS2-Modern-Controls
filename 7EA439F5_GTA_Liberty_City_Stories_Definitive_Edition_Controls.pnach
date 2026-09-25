@@ -5,7 +5,7 @@ comment=Built for the original PS2 default control scheme. Changing the in-game 
 comment=Enable group 1 for vehicle controls and group 2 for the GTA III-style on-foot controls.
 comment=Vehicle layout: L2 brake, R2 accelerate, L1 fire, R1 handbrake, Cross handbrake, Square look left, Circle look right, R3 look behind, D-pad Up vehicle sub-mission/misc, D-pad Right next station/radio.
 comment=On-foot layout: R1 center camera, R2 fire, L2 aim, D-pad Left previous weapon, D-pad Right or L1 next weapon. Circle remains native/fire; D-pad Up/Down and R3 remain native.
-comment=Liberty City Stories uses digital acceleration/braking by default; R2/L2 move the game's digital Cross/Square driving actions to the triggers.
+comment=The current Liberty City Stories patch uses digital acceleration/braking on R2/L2. Analog trigger support is in progress.
 comment=Target: NTSC-U SLUS-21423, CRC 7EA439F5.
 comment=Public credit: Zeroable.
 
@@ -13,12 +13,10 @@ comment=Public credit: Zeroable.
 description=Required vehicle controls. In vehicles: L2 brake, R2 accelerate, L1 fire, R1 or Cross handbrake, Square/Circle look left/right, R3 looks behind, D-pad Up activates the vehicle sub-mission or special action, and D-pad Right selects the next radio station. Native D-pad Left/Down are suppressed during gameplay. The pause menu always uses stock controls. On-foot controls remain stock unless group 2 is enabled.
 author=Zeroable
 
-// Shared hook entry from PS2 Controller Remapper.
 patch=1,EE,200FD050,extended,00C0C821
 patch=1,EE,200FD054,extended,080D81DB
 patch=1,EE,200FD058,extended,24030070
 
-// Definitive Edition-style in-vehicle controls.
 patch=1,EE,200FD05C,extended,87240002
 patch=1,EE,200FD060,extended,3485EFF4
 patch=1,EE,200FD064,extended,93260012
@@ -95,8 +93,6 @@ patch=1,EE,200FD17C,extended,A32E0010
 patch=1,EE,200FD180,extended,03E00008
 patch=1,EE,200FD184,extended,A7250002
 
-// Pause-aware vehicle wrapper.
-// LCS pause flag: 0x003D9CB4 (0=gameplay, nonzero=pause menu).
 patch=1,EE,200FD200,extended,3C08003E
 patch=1,EE,200FD204,extended,8D099CB4
 patch=1,EE,200FD208,extended,1520001D
@@ -104,7 +100,6 @@ patch=1,EE,200FD20C,extended,00000000
 patch=1,EE,200FD210,extended,0803F417
 patch=1,EE,200FD214,extended,00000000
 
-// Pause-aware on-foot wrapper.
 patch=1,EE,200FD240,extended,3C08003E
 patch=1,EE,200FD244,extended,8D099CB4
 patch=1,EE,200FD248,extended,1520000D
@@ -112,16 +107,12 @@ patch=1,EE,200FD24C,extended,00000000
 patch=1,EE,200FD250,extended,0803F600
 patch=1,EE,200FD254,extended,00000000
 
-// Native return used while the pause menu is open.
 patch=1,EE,200FD280,extended,03E00008
 patch=1,EE,200FD284,extended,00000000
-// Dynamic hook install/restore using the Liberty City Stories current vehicle pointer at 0x003D9898.
-// In vehicle: high halfword at 0x003D989A is nonzero, so install the vehicle layout.
 patch=1,EE,D03D989A,extended,02100000
 patch=1,EE,20360764,extended,0803F414
 patch=1,EE,203607CC,extended,0803F480
 
-// On foot: high halfword at 0x003D989A is zero, so restore original game instructions unless group 2 is enabled.
 patch=1,EE,D03D989A,extended,02000000
 patch=1,EE,20360764,extended,24030070
 patch=1,EE,203607CC,extended,03E00008
@@ -130,13 +121,6 @@ patch=1,EE,203607CC,extended,03E00008
 description=Requires group 1. On foot: R1 centers the camera, R2 fires, L2 aims, D-pad Left selects the previous weapon, and both D-pad Right and L1 select the next weapon. Circle remains native/fire, while D-pad Up/Down and R3 stay native. The pause menu always uses stock controls.
 author=Zeroable
 
-// GTA III-style on-foot controls for Liberty City Stories.
-// R1 -> native L1 / center camera.
-// R2 -> native Circle / fire.
-// L2 -> native R1 / aim.
-// D-pad Left -> native L2 / previous weapon.
-// D-pad Right and L1 -> native R2 / next weapon.
-// Circle, D-pad Up/Down and R3 remain native.
 patch=1,EE,200FD800,extended,87240002
 patch=1,EE,200FD804,extended,34850FA0
 patch=1,EE,200FD808,extended,93260011
@@ -184,7 +168,6 @@ patch=1,EE,200FD8AC,extended,A3290013
 patch=1,EE,200FD8B0,extended,03E00008
 patch=1,EE,200FD8B4,extended,A7250002
 
-// On-foot hook override. When group 2 is enabled and Toni is on foot, install the hook and route to the on-foot body.
 patch=1,EE,D03D989A,extended,02000000
 patch=1,EE,20360764,extended,0803F414
 patch=1,EE,203607CC,extended,0803F490
