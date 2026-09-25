@@ -74,174 +74,203 @@ The native pause-menu guard is built into these patches. While the pause menu is
 
 # Controls
 
-## Common vehicle layout
+The tables below describe the **complete physical controller layout while the patch is active**, not just the buttons that were changed. When a button is unchanged, it is marked **Native** and its normal game function is shown.
 
-*GTA III*, *Vice City*, *Liberty City Stories*, and *Vice City Stories* use the same overall vehicle layout:
+## GTA III, Vice City, Liberty City Stories, and Vice City Stories
 
-| Button | Action |
-| --- | --- |
-| L2 | Brake / reverse |
-| R2 | Accelerate |
-| L1 | Vehicle fire |
-| R1 | Handbrake |
-| Cross | Handbrake |
-| Square | Look left |
-| Circle | Look right |
-| R3 | Look behind |
-| D-pad Up | Vehicle sub-mission or special action |
-| D-pad Right | Next radio station |
+These four games use the same modernized on-foot layout and the same overall vehicle layout.
 
-Native D-pad Left and Down are suppressed while the vehicle remap is active.
+### On foot
 
-Cross is used as a second handbrake button alongside R1, giving the driving layout a feel closer to later GTA games.
+| Physical control | Action with patch | Notes |
+| --- | --- | --- |
+| Left Stick | Move | **Native** |
+| Right Stick | Camera / look | **Native**; exact camera behavior remains game-specific |
+| Cross | Sprint / run | **Native** |
+| Square | Jump | **Native** |
+| Triangle | Enter vehicle | **Native** |
+| Circle | Attack / fire | **Native** |
+| L2 | Aim / target | Remapped from the game's native R1 targeting function |
+| R2 | Attack / fire | Additional fire button |
+| L1 | Next weapon | Remapped to the game's native R2 / next-weapon function |
+| R1 | Center / reset camera | Remapped to the game's native L1 camera-center function |
+| D-pad Left | Previous weapon | Remapped to the game's native L2 / previous-weapon function |
+| D-pad Right | Next weapon | Remapped to the game's native R2 / next-weapon function |
+| R3 | Look behind | **Native** |
+| Select | Change camera mode | **Native** |
+| Start | Pause menu | **Native**; the pause-menu guard restores stock menu controls |
+| L3 | Original game function | **Native**; this differs by game (for example crouch or free aim where supported) |
+
+The core on-foot layout is therefore the same in **GTA III, Vice City, Liberty City Stories, and Vice City Stories**: L2 aims, R2 fires, R1 centers the camera, L1 selects the next weapon, and the D-pad left/right directions cycle weapons.
+
+For the remaining D-pad directions, the current GTA III and Vice City patches suppress D-pad Up/Down while the on-foot remap is active. Liberty City Stories and Vice City Stories leave those directions native.
+
+### In vehicles
+
+| Physical control | Action with patch | Notes |
+| --- | --- | --- |
+| Left Stick | Steer | **Native** |
+| Right Stick | Vehicle camera / turret / other vehicle-specific function | **Native** |
+| L2 | Brake / reverse | Moved from native Square |
+| R2 | Accelerate | Moved from native Cross |
+| L1 | Vehicle fire | Moved to the left shoulder |
+| R1 | Handbrake | Same gameplay function as stock |
+| Cross | Handbrake | Second handbrake button |
+| Square | Look left | Moved from native L2 |
+| Circle | Look right | Moved from native R2 |
+| Triangle | Exit vehicle | **Native** |
+| L3 | Horn / siren where supported | **Native** |
+| R3 | Look behind | Mapped to the game's native left+right look input |
+| D-pad Up | Vehicle sub-mission / special action | Moved from the game's native R3 vehicle action |
+| D-pad Right | Next radio station | Moved from the game's native radio control |
+| D-pad Left | Unassigned by the modern layout | Native direction is suppressed while driving |
+| D-pad Down | Unassigned by the modern layout | Native direction is suppressed while driving |
+| Select | Change camera mode | **Native** |
+| Start | Pause menu | **Native**; pause/menu input is restored to stock |
+
+Cross is intentionally available as a second handbrake button alongside R1.
+
+### Pause menus
+
+For **GTA III** and **Vice City**, enable Group 3 to restore native controls while the pause/menu screen is open.
+
+For **Liberty City Stories** and **Vice City Stories**, the pause guard is built directly into the patch. The pause menu automatically receives completely stock controller input.
 
 ### Analog acceleration and braking
 
-The original PS2 versions of *GTA III*, *Vice City*, and *San Andreas* used the DualShock 2's pressure-sensitive face buttons for driving. The patches move those native acceleration/braking inputs to R2 and L2 while preserving pressure values.
+GTA III and Vice City retain the original PS2 pressure-sensitive acceleration and braking data when those actions are moved to R2/L2.
 
-When the controller and emulator expose analog trigger input, light trigger presses can produce lighter acceleration or braking and full presses can produce full input.
-
-*Liberty City Stories* and *Vice City Stories* use digital acceleration and braking by default, so their R2/L2 driving controls remain digital.
-
----
-
-## GTA III and Vice City — on foot
-
-These two games use the same on-foot layout:
-
-| Button | Action |
-| --- | --- |
-| L2 | Target / aim |
-| R2 | Attack / fire |
-| Circle | Attack / fire |
-| L1 | Next weapon |
-| R1 | Reset / center camera |
-| D-pad Left | Previous weapon |
-| D-pad Right | Next weapon |
-| R3 | Native action |
-
-The important camera difference compared with San Andreas is **R1**: in GTA III and Vice City it is used to reset/center the camera.
-
-Native D-pad Up and Down are suppressed while the on-foot group is active. Enable Group 3 so pause/menu navigation always uses the game's native controls.
-
----
-
-## Liberty City Stories and Vice City Stories — on foot
-
-LCS and VCS use a slightly different version of the GTA III-style layout because both games have a freely moving right-stick camera.
-
-| Button | Action |
-| --- | --- |
-| L2 | Aim |
-| R2 | Fire |
-| Circle | Native fire |
-| R1 | Center camera |
-| L1 | Next weapon |
-| D-pad Left | Previous weapon |
-| D-pad Right | Next weapon |
-| D-pad Up | Native |
-| D-pad Down | Native |
-| R3 | Native |
-
-Both **L1** and **D-pad Right** select the next weapon.
-
-The pause menu always uses completely stock controls automatically.
+Liberty City Stories and Vice City Stories use digital acceleration and braking, so their R2/L2 driving controls are digital.
 
 ---
 
 ## San Andreas
 
-San Andreas uses separate handling for standard vehicles, bikes, and aircraft.
-
-It also has a temporary native-input override for situations where a gameplay prompt requires the original D-pad.
-
-### Important: hold Select for native controls while in a vehicle
-
-While in any vehicle, hold **Select** to temporarily restore the original vehicle controls.
-
-This is especially useful for prompts that require a directional Yes/No response, such as date interactions. Release Select to return immediately to the modern layout.
+San Andreas uses the same general modern layout, but its original controls are more complex, so the patch has separate handling for on-foot play, standard vehicles, bikes, and aircraft.
 
 ### On foot
 
-| Button | Action |
-| --- | --- |
-| L2 | Aim |
-| R2 | Fire |
-| L1 | Previous weapon |
-| R1 | Next weapon |
-| D-pad | Native actions |
-| R3 | Native |
+| Physical control | Action with patch | Notes |
+| --- | --- | --- |
+| Left Stick | Character movement | **Native** |
+| Right Stick | Camera movement | **Native** |
+| Cross | Run / sprint | **Native** |
+| Square | Jump / climb / block | **Native** |
+| Triangle | Enter vehicle / game-specific interaction | **Native** |
+| Circle | Attack / fire | **Native** |
+| L2 | Aim / target | Remapped from native R1 |
+| R2 | Fire | Remapped from native L1 fire function |
+| L1 | Previous weapon | Remapped from native L2 |
+| R1 | Next weapon | Remapped from native R2 |
+| L3 | Crouch | **Native** |
+| R3 | Look behind | **Native** |
+| D-pad Up | Gang active mode | **Native** |
+| D-pad Down | Gang passive mode | **Native** |
+| D-pad Left | Negative response | **Native** |
+| D-pad Right | Positive response | **Native** |
+| Select | Change camera mode | **Native** |
+| Start | Pause menu | **Native**; Group 3 restores stock menu controls |
 
-The important difference from GTA III and Vice City is **R1**: instead of resetting the camera, it selects the **next weapon**.
+The major difference from the other four games is R1: in San Andreas it becomes **Next Weapon** instead of **Center Camera**.
 
 ### Standard vehicles
 
-| Button | Action |
-| --- | --- |
-| L2 | Brake / reverse |
-| R2 | Accelerate |
-| L1 | Main fire |
-| R1 | Handbrake |
-| Cross | Handbrake |
-| Square | Look left |
-| Circle | Look right |
-| R3 | Look behind |
-| D-pad Up | Sub-mission, landing gear, or special vehicle action |
-| D-pad Down | Alternate fire / turbo |
-| D-pad Left | Previous radio station |
-| D-pad Right | Next radio station |
+| Physical control | Action with patch | Notes |
+| --- | --- | --- |
+| Left Stick | Steering | **Native** |
+| Right Stick | Manual camera / turret / vehicle-specific control | **Native** |
+| L2 | Brake / reverse | Moved from native Square |
+| R2 | Accelerate | Moved from native Cross |
+| L1 | Main vehicle fire | Mapped to native Circle |
+| R1 | Handbrake | Same gameplay function as stock |
+| Cross | Handbrake | Second handbrake button |
+| Square | Look left | Mapped to native L2 |
+| Circle | Look right | Mapped to native R2 |
+| Triangle | Exit vehicle | **Native** |
+| L3 | Horn / siren where supported | **Native** |
+| R3 | Look behind | Mapped to native L2+R2 |
+| D-pad Up | Sub-mission / special vehicle action | Mapped to native R3 |
+| D-pad Down | Alternate fire / turbo | Mapped to native L1 |
+| D-pad Left | Previous radio station | Uses the game's native radio direction |
+| D-pad Right | Next radio station | Uses the game's native radio direction |
+| Select | **Hold for completely native vehicle controls** | See the important note below |
+| Start | Pause menu | **Native**; Group 3 restores stock menu controls |
 
-Cross is also available as a second handbrake button alongside R1.
+### Important: hold Select to temporarily restore the original vehicle controls
+
+While driving in San Andreas, **hold Select to give every button its original/native function for as long as Select is held**. Release Select and the modern controls immediately return.
+
+This is not just a convenience feature. The modern vehicle layout reuses the **native D-pad Left and D-pad Right inputs**, so those original left/right responses are otherwise unavailable while driving.
+
+That can matter during dates. A girlfriend can ask CJ a question while he is in a vehicle and expect a **left/right D-pad response**. Without a way to send the original D-pad input, the interaction can become a soft lock because there is no valid way to answer.
+
+If that happens, simply **hold Select and press the required native D-pad direction**.
 
 ### Bikes
 
-| Button | Action |
-| --- | --- |
-| R2 | Accelerate |
-| L2 | Brake |
-| Cross | Native accelerate action |
-| Square | Native brake action |
-| D-pad Left | Look left |
-| D-pad Right | Look right |
-| R3 | Look behind |
+| Physical control | Action with patch | Notes |
+| --- | --- | --- |
+| Left Stick | Steering / balance | **Native** |
+| Right Stick | Camera | **Native** |
+| R2 | Accelerate / pedal | Mapped to native Cross |
+| L2 | Brake | Mapped to native Square |
+| Cross | Accelerate / pedal | **Native** and intentionally retained |
+| Square | Brake | **Native** and intentionally retained |
+| D-pad Left | Look left | Mapped to native L2 |
+| D-pad Right | Look right | Mapped to native R2 |
+| R3 | Look behind | Mapped to native L2+R2 |
+| Triangle | Exit / dismount | **Native** |
+| L1 | Original bike-specific action | **Native** |
+| R1 | Original bike-specific action | **Native** |
+| Circle | Original bike-specific vehicle action | **Native** |
+| L3 | Original bike-specific action | **Native** |
+| D-pad Up | Original bike/vehicle action | **Native** |
+| D-pad Down | Original bike/vehicle action | **Native** |
+| Select | **Hold for completely native controls** | Same native override as other vehicles |
+| Start | Pause menu | **Native** |
 
-Cross and Square remain available for their original bike actions. On bicycles, repeatedly tapping Cross may still be preferable when pedaling hard or building speed quickly.
+Cross and Square remain usable for their original bike actions in addition to the trigger mappings. On bicycles, tapping Cross can still be useful for faster pedaling.
 
 ### Aircraft
 
-Aircraft preserve physical L1 and R1 as native inputs so their original special functions remain available.
+Aircraft preserve physical L1 and R1 as native inputs because aircraft use those shoulders for important game-specific functions.
 
-| Button | Action sent to the game |
-| --- | --- |
-| L1 | Native L1 |
-| R1 | Native R1 |
-| R2 | Native Cross |
-| L2 | Native Square |
-| Cross | Native Circle / main fire |
-| Square | Rudder / look left |
-| Circle | Rudder / look right |
-| R3 | Look behind |
-| D-pad Up | Native R3 / landing gear or special action |
-| D-pad Down | Native L1 / alternate fire |
-| D-pad Left | Native D-pad Up |
-| D-pad Right | Native D-pad Down |
+| Physical control | Action with patch | Notes |
+| --- | --- | --- |
+| Left Stick | Pitch / roll | **Native** |
+| Right Stick | Camera / turret where supported | **Native** |
+| L1 | Native L1 aircraft function | **Native** |
+| R1 | Native R1 aircraft function | **Native** |
+| L2 | Native Square function | Descend / aircraft-specific braking function |
+| R2 | Native Cross function | Thrust / ascend depending on aircraft |
+| Cross | Native Circle / main fire | Extra aircraft fire mapping |
+| Square | Native L2 | Rudder / look left |
+| Circle | Native R2 | Rudder / look right |
+| Triangle | Exit aircraft | **Native** |
+| L3 | Native aircraft function | **Native**; for example hover where supported |
+| R3 | Look behind | Mapped to native L2+R2 |
+| D-pad Up | Native R3 / special action | Landing gear, sub-mission, or aircraft-specific action |
+| D-pad Down | Native L1 / alternate fire | Aircraft-specific secondary function |
+| D-pad Left | Native D-pad Up | Previous-direction function used by the original aircraft controls |
+| D-pad Right | Native D-pad Down | Next-direction function used by the original aircraft controls |
+| Select | **Hold for completely native controls** | Same native override as other vehicles |
+| Start | Pause menu | **Native** |
 
-This applies to aircraft with and without weapons, including planes, helicopters, and the Hydra.
+This aircraft layout applies to planes, helicopters, and the Hydra while keeping native L1/R1 functions available.
+
+### Pause menu
+
+Enable Group 3 in San Andreas so the pause/menu screen always receives completely native controller input.
 
 ---
 
-## Why some controls differ between games
+## Summary of the main game-to-game differences
 
-The goal is not to force every game into one identical layout. The patches keep the controls as consistent as possible while respecting differences in the original games.
-
-Examples:
-
-- **GTA III / Vice City:** R1 resets or centers the camera on foot.
-- **San Andreas:** R1 selects the next weapon on foot.
-- **Liberty City Stories / Vice City Stories:** R1 centers the camera, while L1 and D-pad Right both select the next weapon.
-- **San Andreas vehicles:** holding Select temporarily restores the original controls for prompts that need the stock D-pad.
-- **San Andreas bikes and aircraft:** receive their own layouts so vehicle-specific functions remain usable.
-- **LCS / VCS:** pause-menu stock controls are automatic and built into the patch.
+| Game(s) | On-foot R1 | On-foot L1 | Vehicle Select override | Pause-menu handling |
+| --- | --- | --- | --- | --- |
+| GTA III / Vice City | Center camera | Next weapon | No | Group 3 |
+| Liberty City Stories / Vice City Stories | Center camera | Next weapon | No | Automatic / built in |
+| San Andreas | Next weapon | Previous weapon | **Hold Select for all native vehicle controls** | Group 3 |
 
 ## Credits
 
