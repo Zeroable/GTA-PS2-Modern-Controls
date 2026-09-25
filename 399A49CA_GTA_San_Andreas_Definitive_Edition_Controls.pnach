@@ -14,20 +14,16 @@ comment=Public credit: Zeroable.
 description=Required vehicle controls. Bikes and aircraft use vehicle-specific layouts; all other vehicles use the standard modern layout. Hold Select in vehicles to temporarily restore native controls and D-pad input. On-foot controls remain stock unless group 2 is enabled.
 author=Zeroable
 
-// Shared hook entry from PS2 Controller Remapper.
 patch=1,EE,200FD050,extended,00C0C821
 patch=1,EE,200FD054,extended,0814C975
 patch=1,EE,200FD058,extended,24030070
 
-// Native return body used by Select override and optional pause/menu guard.
 patch=1,EE,200FD0F0,extended,03E00008
 patch=1,EE,200FD0F4,extended,00000000
 
-// Vehicle entry default: no pause check. Group 3 overwrites this entry with a pause-aware wrapper.
 patch=1,EE,200FD120,extended,0803F460
 patch=1,EE,200FD124,extended,00000000
 
-// Vehicle pause-aware entry used by group 3.
 patch=1,EE,200FD140,extended,3C080067
 patch=1,EE,200FD144,extended,8509BA3C
 patch=1,EE,200FD148,extended,1520FFE9
@@ -35,7 +31,6 @@ patch=1,EE,200FD14C,extended,00000000
 patch=1,EE,200FD150,extended,0803F460
 patch=1,EE,200FD154,extended,00000000
 
-// Vehicle chooser: bikes are special; aircraft get aircraft-specific controls; everything else uses the hybrid body.
 patch=1,EE,200FD180,extended,3C080067
 patch=1,EE,200FD184,extended,8D08BB48
 patch=1,EE,200FD188,extended,85090022
@@ -120,7 +115,6 @@ patch=1,EE,200FD2C0,extended,00000000
 patch=1,EE,200FD2C4,extended,0803F540
 patch=1,EE,200FD2C8,extended,00000000
 
-// Bike controls with Select-held native input override.
 patch=1,EE,200FD300,extended,87240002
 patch=1,EE,200FD304,extended,30810001
 patch=1,EE,200FD308,extended,1020FF79
@@ -178,7 +172,6 @@ patch=1,EE,200FD3D4,extended,A32C0013
 patch=1,EE,200FD3D8,extended,03E00008
 patch=1,EE,200FD3DC,extended,A7250002
 
-// Standard controls for non-bike, non-aircraft vehicles with Select-held native input override.
 patch=1,EE,200FD500,extended,87240002
 patch=1,EE,200FD504,extended,30810001
 patch=1,EE,200FD508,extended,1020FEF9
@@ -270,7 +263,6 @@ patch=1,EE,200FD65C,extended,A3230013
 patch=1,EE,200FD660,extended,03E00008
 patch=1,EE,200FD664,extended,A7250002
 
-// Aircraft controls. L1/R1 stay native. R2 maps to native Cross. Cross maps to native Circle/fire with full pressure.
 patch=1,EE,200FD900,extended,87240002
 patch=1,EE,200FD904,extended,30810001
 patch=1,EE,200FD908,extended,1020FDF9
@@ -348,13 +340,10 @@ patch=1,EE,200FDA24,extended,A3230013
 patch=1,EE,200FDA28,extended,03E00008
 patch=1,EE,200FDA2C,extended,A7250002
 
-// Dynamic hook install/restore using the San Andreas current vehicle pointer at 0x0066BB48.
-// In vehicle: high halfword at 0x0066BB4A is nonzero, so install hook and route to vehicle entry.
 patch=1,EE,D066BB4A,extended,02100000
 patch=1,EE,205325CC,extended,0803F414
 patch=1,EE,20532674,extended,0803F448
 
-// On foot: high halfword at 0x0066BB4A is zero, so restore original game instructions unless group 2 is enabled.
 patch=1,EE,D066BB4A,extended,02000000
 patch=1,EE,205325CC,extended,24030070
 patch=1,EE,20532674,extended,03E00008
@@ -363,11 +352,9 @@ patch=1,EE,20532674,extended,03E00008
 description=Requires group 1. On foot: physical R2->native L1/fire, physical L2->native R1/aim, physical L1->native L2/previous weapon, and physical R1->native R2/next weapon. D-pad and R3 stay native.
 author=Zeroable
 
-// On-foot entry default: no pause check. Group 3 overwrites this entry with a pause-aware wrapper.
 patch=1,EE,200FDD00,extended,0803F760
 patch=1,EE,200FDD04,extended,00000000
 
-// On-foot pause-aware entry used by group 3.
 patch=1,EE,200FDD20,extended,3C080067
 patch=1,EE,200FDD24,extended,8509BA3C
 patch=1,EE,200FDD28,extended,1520FCF1
@@ -375,7 +362,6 @@ patch=1,EE,200FDD2C,extended,00000000
 patch=1,EE,200FDD30,extended,0803F760
 patch=1,EE,200FDD34,extended,00000000
 
-// On-foot trigger-swap controls.
 patch=1,EE,200FDD80,extended,87240002
 patch=1,EE,200FDD84,extended,3085F0FF
 patch=1,EE,200FDD88,extended,93260010
@@ -401,7 +387,6 @@ patch=1,EE,200FDDD4,extended,A3290010
 patch=1,EE,200FDDD8,extended,03E00008
 patch=1,EE,200FDDDC,extended,A7250002
 
-// On-foot hook override. If group 2 is enabled and CJ is on foot, install the hook and route to the on-foot entry.
 patch=1,EE,D066BB4A,extended,02000000
 patch=1,EE,205325CC,extended,0803F414
 patch=1,EE,20532674,extended,0803F740
@@ -410,10 +395,8 @@ patch=1,EE,20532674,extended,0803F740
 description=Requires group 1. While the pause/menu flag at 0x0066BA3C equals 1, keep the hook installed and return native pad input.
 author=Zeroable
 
-// Enable pause-aware vehicle entry.
 patch=1,EE,200FD120,extended,0803F450
 patch=1,EE,200FD124,extended,00000000
 
-// Enable pause-aware on-foot entry.
 patch=1,EE,200FDD00,extended,0803F748
 patch=1,EE,200FDD04,extended,00000000
