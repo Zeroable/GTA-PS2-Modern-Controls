@@ -21,26 +21,25 @@ These layouts have been tested on:
 
 ## Supported game versions
 
-| Game | Region and release | PCSX2 CRC | Repository file | Rename to |
-| --- | --- | --- | --- | --- |
-| Grand Theft Auto III | NTSC-U, SLUS-20062 | `5E115FB6` | [`5E115FB6_GTA_3_Definitive_Edition_Controls.pnach`](5E115FB6_GTA_3_Definitive_Edition_Controls.pnach) | `5E115FB6.pnach` |
-| Grand Theft Auto: Vice City | NTSC-U Day 1, SLUS-20552 | `20B19E49` | [`20B19E49_GTA_Vice_City_Definitive_Edition_Controls.pnach`](20B19E49_GTA_Vice_City_Definitive_Edition_Controls.pnach) | `20B19E49.pnach` |
-| Grand Theft Auto: San Andreas | NTSC-U, SLUS-20946 | `399A49CA` | [`399A49CA_GTA_San_Andreas_Definitive_Edition_Controls.pnach`](399A49CA_GTA_San_Andreas_Definitive_Edition_Controls.pnach) | `399A49CA.pnach` |
-| Grand Theft Auto: Liberty City Stories | NTSC-U, SLUS-21423 | `7EA439F5` | [`7EA439F5_GTA_Liberty_City_Stories_Definitive_Edition_Controls.pnach`](7EA439F5_GTA_Liberty_City_Stories_Definitive_Edition_Controls.pnach) | `7EA439F5.pnach` |
-| Grand Theft Auto: Vice City Stories | NTSC-U, SLUS-21590 | `4F32A11F` | [`4F32A11F_GTA_Vice_City_Stories_Definitive_Edition_Controls.pnach`](4F32A11F_GTA_Vice_City_Stories_Definitive_Edition_Controls.pnach) | `4F32A11F.pnach` |
+| Game | Region and release | PCSX2 CRC | Patch file |
+| --- | --- | --- | --- |
+| Grand Theft Auto III | NTSC-U, SLUS-20062 | `5E115FB6` | [`5E115FB6_GTA_3_Definitive_Edition_Controls.pnach`](5E115FB6_GTA_3_Definitive_Edition_Controls.pnach) |
+| Grand Theft Auto: Vice City | NTSC-U Day 1, SLUS-20552 | `20B19E49` | [`20B19E49_GTA_Vice_City_Definitive_Edition_Controls.pnach`](20B19E49_GTA_Vice_City_Definitive_Edition_Controls.pnach) |
+| Grand Theft Auto: San Andreas | NTSC-U, SLUS-20946 | `399A49CA` | [`399A49CA_GTA_San_Andreas_Definitive_Edition_Controls.pnach`](399A49CA_GTA_San_Andreas_Definitive_Edition_Controls.pnach) |
+| Grand Theft Auto: Liberty City Stories | NTSC-U, SLUS-21423 | `7EA439F5` | [`7EA439F5_GTA_Liberty_City_Stories_Definitive_Edition_Controls.pnach`](7EA439F5_GTA_Liberty_City_Stories_Definitive_Edition_Controls.pnach) |
+| Grand Theft Auto: Vice City Stories | NTSC-U, SLUS-21590 | `4F32A11F` | [`4F32A11F_GTA_Vice_City_Stories_Definitive_Edition_Controls.pnach`](4F32A11F_GTA_Vice_City_Stories_Definitive_Edition_Controls.pnach) |
 
 These files are CRC-specific. A patch for one CRC should not be used with a different game revision.
 
 ## Installation
 
 1. Download the PNACH file for your game.
-2. Rename it to the CRC-only filename shown in the table above.
-3. Place it in PCSX2's `cheats` folder.
-4. Enable cheats in PCSX2.
-5. Open the game's cheat list and enable the desired groups.
-6. Leave the game on its **original/default PS2 control scheme**.
+2. Drag or copy it directly into PCSX2's `cheats` folder.
+3. Enable cheats in PCSX2.
+4. Open the game's cheat list and enable the desired groups.
+5. Leave the game on its **original/default PS2 control scheme**.
 
-If you already have a PNACH file for the same CRC, merge the contents if you want to keep your other cheats instead of simply replacing the existing file.
+No renaming or editing of the PNACH file is required.
 
 ## Cheat groups and pause-menu behavior
 
