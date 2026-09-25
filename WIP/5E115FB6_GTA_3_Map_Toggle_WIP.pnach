@@ -1,8 +1,9 @@
-gametitle=GTA III SLUS-20062 / 5E115FB6 - map toggle test
-comment=Start + Select; release both before toggling again. Cold boot required.
-comment=4:3 display. Original textures. Debug mailbox disabled by default.
-comment=This is a Work in Progress - Working on Adding Blips and Markers - 9/25/2026
-author=Zeroable and Codex
+gametitle=Grand Theft Auto III (NTSC-U SLUS-20062 / CRC 5E115FB6)
+comment=Work in progress. Adds an in-game map using the original GTA III map assets.
+comment=Press Start + Select to toggle the map; release both buttons before toggling again.
+comment=Cold boot required. The current build is intended for a 4:3 display.
+comment=Map blips and markers are not yet implemented.
+author=Zeroable
 [Map Toggle - Press Start and Select WIP]
 patch=0,EE,00100074,word,24843480
 patch=0,EE,001002B4,word,24433480
