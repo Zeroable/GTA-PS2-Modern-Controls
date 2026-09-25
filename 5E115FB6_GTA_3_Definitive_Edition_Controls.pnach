@@ -7,6 +7,7 @@ comment=On-foot layout: L2 targeting, R2 attack, Circle attack, L1 next weapon, 
 comment=The pause/menu guard restores native controls while a menu is open.
 comment=Target: NTSC-U SLUS-20062, CRC 5E115FB6.
 comment=Public credit: Zeroable.
+comment=Control-remapping foundation based on PS2 Controller Remapper by pelvicthrustman.
 
 [Cheats\1 REQUIRED - Definitive Edition vehicle controls]
 description=Required vehicle controls. In vehicles: L2 brake, R2 accelerate, L1 fire, R1 or Cross handbrake, Square/Circle look left/right, R3 looks behind, D-pad Up activates the vehicle sub-mission or special action, and D-pad Right selects the next radio station. Native D-pad Left/Down are suppressed during gameplay. On-foot controls remain stock unless group 2 is enabled.
