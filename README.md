@@ -22,19 +22,19 @@ Modern controllers normally place analog acceleration and braking on R2 and L2. 
 
 ## Coming soon / work in progress
 
-Several additional mods are actively being developed. Some are already available in the [`WIP`](WIP) folder for testing, but they should be considered unfinished and may still change.
+Several additional mods are actively being developed. Test builds that are far enough along to use are available in the [`WIP`](WIP) folder, but they should still be considered unfinished and may change.
 
 ### Available now as WIP builds
 
 - **Grand Theft Auto III — First-person mod** — [download WIP build](WIP/5E115FB6_GTA3_First_Person_WIP.pnach)
 - **Grand Theft Auto III — HUD removal mod** — [download WIP build](WIP/5E115FB6_GTA3_No_Hud_WIP.pnach)
 - **Grand Theft Auto III — in-game map mod** — [download WIP build](WIP/5E115FB6_GTA_3_Map_Toggle_WIP.pnach)
+- **Grand Theft Auto: San Andreas — First-person mod** — [download WIP build](WIP/399A49CA_GTA_San_Andreas_First_Person_WIP.pnach)
+- **Grand Theft Auto: Vice City — Right-stick camera and first-person mod** — [download WIP build](WIP/20B19E49_GTA_Vice_City_Right_Stick_Camera_and_First_Person_WIP.pnach)
 
 ### Still in development
 
-- **Grand Theft Auto: Vice City — First-person mod**
-- **Grand Theft Auto III — camera mod**
-- **Grand Theft Auto: Vice City — camera mod**
+- **Grand Theft Auto III — right-stick camera mod**
 - **Grand Theft Auto: Liberty City Stories — analog acceleration support**
 
 The WIP files are provided so they can be tested while development continues. They are separate from the finished Definitive Edition control patches in the repository root.
@@ -70,7 +70,7 @@ No renaming or editing of the PNACH file is required.
 
 ## WIP patch documentation
 
-The following GTA III patches are currently available in the [`WIP`](WIP) folder. They target **NTSC-U SLUS-20062 / CRC `5E115FB6`** and are still being worked on.
+The following experimental patches are currently available in the [`WIP`](WIP) folder. They are usable test builds, but development is still ongoing. Each patch is CRC-specific, just like the finished control patches.
 
 ### GTA III First-person mod
 
@@ -111,6 +111,41 @@ Current usage and limitations:
 - The current build is designed around a **4:3 display**.
 - It uses the game's original textures.
 - **Map blips and markers are still in development.**
+
+### GTA San Andreas First-person mod
+
+File: [`WIP/399A49CA_GTA_San_Andreas_First_Person_WIP.pnach`](WIP/399A49CA_GTA_San_Andreas_First_Person_WIP.pnach)
+
+Target: **NTSC-U SLUS-20946 / CRC `399A49CA`**
+
+The current San Andreas WIP uses the closest on-foot camera to provide a first-person-style view with free vertical look.
+
+Current behavior and options:
+
+- **First Person - Free Vertical Look** is the main group.
+- The current camera defaults use a distance of **-2.35** and a height adjustment of **+0.65**.
+- Other camera cheats should be disabled while testing it.
+- **First Person - Hide Body** is an optional group that requires the main first-person group.
+- Hide Body removes CJ's body from the closest on-foot first-person view while leaving weapons on their normal draw path.
+- Switching camera restores the body.
+- To fully undo the instruction patch or uninstall the Hide Body hooks, restart the game with the relevant cheat disabled.
+
+### GTA Vice City Right-stick Camera and First-person mod
+
+File: [`WIP/20B19E49_GTA_Vice_City_Right_Stick_Camera_and_First_Person_WIP.pnach`](WIP/20B19E49_GTA_Vice_City_Right_Stick_Camera_and_First_Person_WIP.pnach)
+
+Target: **NTSC-U Day 1 SLUS-20552 / CRC `20B19E49`**
+
+This WIP combines the Vice City right-stick camera project and first-person project into one patch.
+
+Current controls and status:
+
+- **Select + R3** cycles between **Normal**, **Orbit**, and **First Person** camera modes.
+- **Select** by itself cycles the Orbit camera distance.
+- Orbit camera operation has been tested on foot, in cars, on motorcycles, in helicopters, and in the Skimmer.
+- First Person currently applies **on foot only** and is still being actively tested.
+- The development build reserves **32 KiB** of memory and requires a full boot; use memory-card saves while testing it.
+- The patch includes compatibility with the Zeroable modern-control remapper through the shared input hook. Do **not** enable the original standalone remapper hooks alongside this WIP file.
 
 ## Cheat groups and pause-menu behavior
 
