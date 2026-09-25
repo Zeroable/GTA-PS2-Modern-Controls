@@ -1,12 +1,15 @@
-gametitle=Grand Theft Auto III (NTSC-U) SLUS-20062 [5E115FB6]
+gametitle=Grand Theft Auto III (NTSC-U SLUS-20062 / CRC 5E115FB6)
+comment=Work in progress. Adds an on-foot first-person camera using the game's overhead camera slot.
+comment=Cycle past the three normal third-person camera distances to enter first person.
+comment=Right-stick look, camera-relative movement, and R3 look-behind are supported.
+comment=Optional vertical-look inversion is available as a separate cheat group.
+comment=Fully restart the game with the main cheat disabled to completely remove the patch.
 
 [Cheats\First Person - Overhead Slot]
-author=OpenAI
+author=Zeroable
 description=First-person view replaces the overhead on-foot camera. Cycle past the three normal third-person distances. Keeps native eye position and right-stick look; allows camera-relative directional movement. Optional inversion settings below require this cheat. Fully restart with this cheat disabled to uninstall.
-// Revision 3. Keep selector position 4, but request ordinary on-foot mode for correct world visibility and R3.
 patch=1,EE,2024EE24,extended,24020004
 patch=1,EE,20267930,extended,0C0999A8
-// Restore defaults every frame so changing camera or disabling an inversion option takes effect.
 patch=1,EE,202679A0,extended,0C098810
 patch=1,EE,2024E074,extended,A20208A6
 patch=1,EE,20258EDC,extended,E460031C
@@ -14,7 +17,6 @@ patch=1,EE,20258EEC,extended,E4600320
 patch=1,EE,202588C4,extended,46010000
 patch=1,EE,202588D4,extended,46030000
 patch=1,EE,20268590,extended,0C097EB0
-// R3 routine: rotate Front and Up 180 degrees about world Z; preserve eye position, pitch, and saved yaw.
 patch=1,EE,200F1000,extended,C48000AC
 patch=1,EE,200F1004,extended,46000007
 patch=1,EE,200F1008,extended,E48000AC
@@ -29,13 +31,10 @@ patch=1,EE,200F1028,extended,46000007
 patch=1,EE,200F102C,extended,E48000BC
 patch=1,EE,200F1030,extended,03E00008
 patch=1,EE,200F1034,extended,00000000
-// Prevent stationary look-around control lock while overhead zoom is selected.
 patch=1,EE,E0034080,extended,004E2E6A
 patch=1,EE,E0020000,extended,004E2E68
 patch=1,EE,2024E074,extended,A20008A6
 patch=1,EE,202679A0,extended,0C096174
-// In active overhead/FP mode only, preserve the heading selected by normal movement code.
-// Claude still uses the original movement animations and can rotate relative to the view.
 patch=1,EE,E0064080,extended,004E2E6A
 patch=1,EE,E0050000,extended,004E2E68
 patch=1,EE,E1040000,extended,004E3694
@@ -52,9 +51,8 @@ patch=1,EE,20258EEC,extended,00000000
 patch=1,EE,20268590,extended,0C03C400
 
 [Cheats\First Person - Invert Vertical Look]
-author=OpenAI
+author=Zeroable
 description=Requires First Person - Overhead Slot. Reverses only the vertical right-stick look axis in first person.
-// The main cheat restores normal polarity each frame before this optional override.
 patch=1,EE,E00A6174,extended,002679A0
 patch=1,EE,E0044080,extended,004E2E6A
 patch=1,EE,E0030000,extended,004E2E68
