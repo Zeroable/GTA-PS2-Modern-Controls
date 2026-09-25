@@ -72,6 +72,12 @@ No renaming or editing of the PNACH file is required.
 
 The following experimental patches are currently available in the [`WIP`](WIP) folder. They are usable test builds, but development is still ongoing. Each patch is CRC-specific, just like the finished control patches.
 
+### GTA III WIP demonstration
+
+This video demonstrates the current **GTA III first-person mod**, **HUD removal mod**, and **in-game map mod** together:
+
+https://github.com/user-attachments/assets/307348f2-f506-46b0-9484-0fb834005f0f
+
 ### GTA III First-person mod
 
 File: [`WIP/5E115FB6_GTA3_First_Person_WIP.pnach`](WIP/5E115FB6_GTA3_First_Person_WIP.pnach)
@@ -146,6 +152,14 @@ Current controls and status:
 - First Person currently applies **on foot only** and is still being actively tested.
 - The development build reserves **32 KiB** of memory and requires a full boot; use memory-card saves while testing it.
 - The patch includes compatibility with the Zeroable modern-control remapper through the shared input hook. Do **not** enable the original standalone remapper hooks alongside this WIP file.
+
+#### Demonstration videos
+
+These videos demonstrate the current **Vice City right-stick camera** and **first-person** work:
+
+https://github.com/user-attachments/assets/c2683745-0835-40fb-9e9d-76b44173263b
+
+https://github.com/user-attachments/assets/b00580cb-8d17-4dae-8837-d51808d85970
 
 ## Cheat groups and pause-menu behavior
 
