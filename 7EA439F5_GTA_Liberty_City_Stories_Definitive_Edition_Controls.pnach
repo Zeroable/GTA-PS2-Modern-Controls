@@ -8,6 +8,7 @@ comment=On-foot layout: R1 center camera, R2 fire, L2 aim, D-pad Left previous w
 comment=The current Liberty City Stories patch uses digital acceleration/braking on R2/L2. Analog trigger support is in progress.
 comment=Target: NTSC-U SLUS-21423, CRC 7EA439F5.
 comment=Public credit: Zeroable.
+comment=Control-remapping foundation based on PS2 Controller Remapper by pelvicthrustman.
 
 [Cheats\1 REQUIRED - Definitive Edition vehicle controls]
 description=Required vehicle controls. In vehicles: L2 brake, R2 accelerate, L1 fire, R1 or Cross handbrake, Square/Circle look left/right, R3 looks behind, D-pad Up activates the vehicle sub-mission or special action, and D-pad Right selects the next radio station. Native D-pad Left/Down are suppressed during gameplay. The pause menu always uses stock controls. On-foot controls remain stock unless group 2 is enabled.
