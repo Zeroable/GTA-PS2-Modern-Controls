@@ -9,6 +9,7 @@ comment=Other vehicles: R2 accelerate, L2 brake/reverse, R1 or Cross handbrake, 
 comment=On foot: R2 fires, L2 aims, L1 selects the previous weapon, and R1 selects the next weapon. D-pad and R3 stay native.
 comment=The pause/menu guard returns native pad input while paused.
 comment=Public credit: Zeroable.
+comment=Control-remapping foundation based on PS2 Controller Remapper by pelvicthrustman.
 
 [Cheats\1 REQUIRED - Definitive Edition vehicle controls]
 description=Required vehicle controls. Bikes and aircraft use vehicle-specific layouts; all other vehicles use the standard modern layout. Hold Select in vehicles to temporarily restore native controls and D-pad input. On-foot controls remain stock unless group 2 is enabled.
