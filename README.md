@@ -20,19 +20,24 @@ Modern controllers normally place analog acceleration and braking on R2 and L2. 
 
 *Vice City Stories* also supports analog acceleration and braking on PS2, so its R2/L2 trigger mappings preserve that analog behavior. *Liberty City Stories* currently uses digital acceleration and braking in this patch; analog acceleration support for LCS is in progress.
 
-## Coming soon
+## Coming soon / work in progress
 
-The following projects are currently in progress and are planned for this repository:
+Several additional mods are actively being developed. Some are already available in the [`WIP`](WIP) folder for testing, but they should be considered unfinished and may still change.
 
-- **Grand Theft Auto III — First-person mod**
+### Available now as WIP builds
+
+- **Grand Theft Auto III — First-person mod** — [download WIP build](WIP/5E115FB6_GTA3_First_Person_WIP.pnach)
+- **Grand Theft Auto III — HUD removal mod** — [download WIP build](WIP/5E115FB6_GTA3_No_Hud_WIP.pnach)
+- **Grand Theft Auto III — in-game map mod** — [download WIP build](WIP/5E115FB6_GTA_3_Map_Toggle_WIP.pnach)
+
+### Still in development
+
 - **Grand Theft Auto: Vice City — First-person mod**
 - **Grand Theft Auto III — camera mod**
 - **Grand Theft Auto: Vice City — camera mod**
-- **Grand Theft Auto III — HUD removal mod**
-- **Grand Theft Auto III — in-game map mod**
 - **Grand Theft Auto: Liberty City Stories — analog acceleration support**
 
-These are works in progress and are not yet part of the current release files.
+The WIP files are provided so they can be tested while development continues. They are separate from the finished Definitive Edition control patches in the repository root.
 
 ## Emulator testing
 
@@ -62,6 +67,50 @@ These files are CRC-specific. A patch for one CRC should not be used with a diff
 5. Leave the game on its **original/default PS2 control scheme**.
 
 No renaming or editing of the PNACH file is required.
+
+## WIP patch documentation
+
+The following GTA III patches are currently available in the [`WIP`](WIP) folder. They target **NTSC-U SLUS-20062 / CRC `5E115FB6`** and are still being worked on.
+
+### GTA III First-person mod
+
+File: [`WIP/5E115FB6_GTA3_First_Person_WIP.pnach`](WIP/5E115FB6_GTA3_First_Person_WIP.pnach)
+
+The first-person view uses the game's overhead camera slot. Cycle past the three normal third-person camera distances to reach it.
+
+Current behavior:
+
+- Keeps the native first-person eye position.
+- Supports right-stick look.
+- Supports camera-relative directional movement while in first person.
+- R3 look-behind behavior is handled by the patch.
+- Includes an optional **First Person - Invert Vertical Look** group.
+- The inversion option requires the main **First Person - Overhead Slot** group.
+
+To fully uninstall or disable the first-person patch, restart the game with the cheat disabled.
+
+### GTA III HUD removal mod
+
+File: [`WIP/5E115FB6_GTA3_No_Hud_WIP.pnach`](WIP/5E115FB6_GTA3_No_Hud_WIP.pnach)
+
+Enable **No HUD + Radar** to hide the GTA III HUD and minimap/radar.
+
+This is currently provided as a simple WIP HUD-removal patch.
+
+### GTA III in-game map mod
+
+File: [`WIP/5E115FB6_GTA_3_Map_Toggle_WIP.pnach`](WIP/5E115FB6_GTA_3_Map_Toggle_WIP.pnach)
+
+This patch adds an in-game GTA III map display using the game's original map assets.
+
+Current usage and limitations:
+
+- Press **Start + Select** to toggle the map.
+- Release both buttons before trying to toggle it again.
+- A **cold boot** is required.
+- The current build is designed around a **4:3 display**.
+- It uses the game's original textures.
+- **Map blips and markers are still in development.**
 
 ## Cheat groups and pause-menu behavior
 
