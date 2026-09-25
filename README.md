@@ -18,7 +18,21 @@ The original PS2 games were designed around the DualShock 2 controller, which ha
 
 Modern controllers normally place analog acceleration and braking on R2 and L2. These patches move the games' native pressure-sensitive acceleration and braking actions to those triggers. When the controller and emulator provide analog trigger values, a light press can produce gentle input and a full press can produce full acceleration or braking. A controller configured for digital-only trigger input will still behave like an on/off button.
 
-*Liberty City Stories* and *Vice City Stories* use digital acceleration and braking, but use the same R2/L2 layout for consistency with the other games.
+*Vice City Stories* also supports analog acceleration and braking on PS2, so its R2/L2 trigger mappings preserve that analog behavior. *Liberty City Stories* currently uses digital acceleration and braking in this patch; analog acceleration support for LCS is in progress.
+
+## Coming soon
+
+The following projects are currently in progress and are planned for this repository:
+
+- **Grand Theft Auto III — First-person mod**
+- **Grand Theft Auto: Vice City — First-person mod**
+- **Grand Theft Auto III — camera mod**
+- **Grand Theft Auto: Vice City — camera mod**
+- **Grand Theft Auto III — HUD removal mod**
+- **Grand Theft Auto III — in-game map mod**
+- **Grand Theft Auto: Liberty City Stories — analog acceleration support**
+
+These are works in progress and are not yet part of the current release files.
 
 ## Emulator testing
 
@@ -138,9 +152,9 @@ For **Liberty City Stories** and **Vice City Stories**, the pause guard is built
 
 ### Analog acceleration and braking
 
-GTA III and Vice City retain the original PS2 pressure-sensitive acceleration and braking data when those actions are moved to R2/L2.
+GTA III, Vice City, and Vice City Stories retain the original PS2 analog / pressure-sensitive acceleration and braking behavior when those actions are moved to R2/L2.
 
-Liberty City Stories and Vice City Stories use digital acceleration and braking, so their R2/L2 driving controls are digital.
+Liberty City Stories currently uses digital acceleration and braking in this patch. Analog acceleration support for LCS is in progress.
 
 ---
 
