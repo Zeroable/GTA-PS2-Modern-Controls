@@ -1,8 +1,0 @@
-gametitle=Grand Theft Auto III (USA) SLUS-20062
-
-[GTA-PS2-Modern-Controls\No HUD + Radar]
-description=Hides the GTA III HUD and minimap/radar.
-author=Zeroable
-
-patch=1,EE,002CF5F0,word,03E00008
-patch=1,EE,002CF5F4,word,00000000
