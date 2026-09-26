@@ -5,6 +5,7 @@ comment=Vehicle layout: L2 brake, R2 accelerate, L1 fire, R1 handbrake, Cross ha
 comment=On-foot layout: L2 targeting, R2 attack, Circle attack, L1 next weapon, R1 camera reset, D-pad Left previous weapon, D-pad Right next weapon, and R3 native.
 comment=Target: NTSC-U SLUS-20062, CRC 5E115FB6.
 comment=Public credit: Zeroable.
+comment=The pause/menu native-controls guard is integrated into the existing groups; there is no separate pause cheat option.
 comment=Control-remapping foundation based on PS2 Controller Remapper by pelvicthrustman.
 
 [GTA-PS2-Modern-Controls\Definitive Edition Controls\1 REQUIRED - Definitive Edition vehicle controls]
@@ -99,6 +100,10 @@ patch=1,EE,D0416A82,extended,02000000
 patch=1,EE,2011F2EC,extended,24030070
 patch=1,EE,2011F35C,extended,03E00008
 
+patch=1,EE,D04169CC,extended,02000001
+patch=1,EE,2011F2EC,extended,24030070
+patch=1,EE,2011F35C,extended,03E00008
+
 [GTA-PS2-Modern-Controls\Definitive Edition Controls\2 OPTIONAL - Definitive Edition on-foot controls]
 description=Requires group 1. On foot: L2 targeting, R2 attack, Circle attack, L1 next weapon/native R2, R1 camera reset/native L1, D-pad Left previous weapon/native L2, and D-pad Right next weapon/native R2. Native D-pad Up/Down are suppressed during gameplay. R3 remains native.
 author=Zeroable
@@ -162,4 +167,8 @@ patch=1,EE,200FD8D8,extended,A7250002
 patch=1,EE,D0416A82,extended,02000000
 patch=1,EE,2011F2EC,extended,0803F414
 patch=1,EE,2011F35C,extended,0803F600
+
+patch=1,EE,D04169CC,extended,02000001
+patch=1,EE,2011F2EC,extended,24030070
+patch=1,EE,2011F35C,extended,03E00008
 
