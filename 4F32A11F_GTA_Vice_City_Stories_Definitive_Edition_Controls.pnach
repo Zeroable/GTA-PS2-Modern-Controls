@@ -10,7 +10,7 @@ comment=Target: NTSC-U SLUS-21590, CRC 4F32A11F.
 comment=Public credit: Zeroable.
 comment=Control-remapping foundation based on PS2 Controller Remapper by pelvicthrustman.
 
-[Cheats\1 REQUIRED - Definitive Edition vehicle controls]
+[GTA-PS2-Modern-Controls\Definitive Edition Controls\1 REQUIRED - Definitive Edition vehicle controls]
 description=Required vehicle controls. In vehicles: L2 brake, R2 accelerate, L1 fire, R1 or Cross handbrake, Square/Circle look left/right, R3 looks behind, D-pad Up activates the vehicle sub-mission or special action, and D-pad Right selects the next radio station. Native D-pad Left/Down are suppressed during gameplay. The pause menu always uses stock controls. On-foot controls remain stock unless group 2 is enabled.
 author=Zeroable
 
@@ -118,7 +118,7 @@ patch=1,EE,D050AB7A,extended,02000000
 patch=1,EE,2044948C,extended,24030070
 patch=1,EE,204494F4,extended,03E00008
 
-[Cheats\2 OPTIONAL - GTA III-style on-foot controls]
+[GTA-PS2-Modern-Controls\Definitive Edition Controls\2 OPTIONAL - Definitive Edition on-foot controls]
 description=Requires group 1. On foot: R1 centers the camera, R2 fires, L2 aims, D-pad Left selects the previous weapon, and both D-pad Right and L1 select the next weapon. Circle remains native/fire, while D-pad Up/Down and R3 stay native. The pause menu always uses stock controls.
 author=Zeroable
 
