@@ -1,15 +1,13 @@
 gametitle=Grand Theft Auto: Vice City (NTSC-U Day 1 / CRC 20B19E49)
 comment=Definitive Edition-style controls for Grand Theft Auto: Vice City.
 comment=Built for the original PS2 default control scheme. Changing the in-game control type can produce different results.
-comment=Enable group 1 for vehicle controls, group 2 for on-foot controls, and group 3 for native pause/menu input.
 comment=Vehicle layout: L2 brake, R2 accelerate, L1 fire, R1 handbrake, Cross handbrake, Square look left, Circle look right, R3 look behind, D-pad Up vehicle sub-mission/misc, D-pad Right next station/radio.
 comment=On-foot layout: L2 targeting, R2 attack, Circle attack, L1 next weapon, R1 camera reset, D-pad Left previous weapon, D-pad Right next weapon, and R3 native.
-comment=The pause/menu guard restores native controls while a menu is open.
 comment=Target: NTSC-U Day 1 SLUS-20552, CRC 20B19E49.
 comment=Public credit: Zeroable.
 comment=Control-remapping foundation based on PS2 Controller Remapper by pelvicthrustman.
 
-[Cheats\1 REQUIRED - Definitive Edition vehicle controls]
+[GTA-PS2-Modern-Controls\Definitive Edition Controls\1 REQUIRED - Definitive Edition vehicle controls]
 description=Required vehicle controls. In vehicles: L2 brake, R2 accelerate, L1 fire, R1 or Cross handbrake, Square/Circle look left/right, R3 looks behind, D-pad Up activates the vehicle sub-mission or special action, and D-pad Right selects the next radio station. Native D-pad Left/Down are suppressed during gameplay. On-foot controls remain stock unless group 2 is enabled.
 author=Zeroable
 
@@ -78,7 +76,7 @@ patch=1,EE,200FD140,extended,A32C0013
 patch=1,EE,200FD144,extended,30810004
 patch=1,EE,200FD148,extended,14200004
 patch=1,EE,200FD14C,extended,00000000
-patch=1,EE,200FD150,extended,30A5FCFF
+patch=1,EE,200FD150,extend,30A5FCFF
 patch=1,EE,200FD154,extended,A32F0012
 patch=1,EE,200FD158,extended,A32F0013
 patch=1,EE,200FD15C,extended,30810010
@@ -101,7 +99,7 @@ patch=1,EE,D04B0EB6,extended,02000000
 patch=1,EE,201221BC,extended,24030070
 patch=1,EE,2012222C,extended,03E00008
 
-[Cheats\2 OPTIONAL - Definitive Edition on-foot controls]
+[GTA-PS2-Modern-Controls\Definitive Edition Controls\2 OPTIONAL - Definitive Edition on-foot controls]
 description=Requires group 1. On foot: L2 targeting, R2 attack, Circle attack, L1 next weapon/native R2, R1 camera reset/native L1, D-pad Left previous weapon/native L2, and D-pad Right next weapon/native R2. Native D-pad Up/Down are suppressed during gameplay. R3 remains native.
 author=Zeroable
 
@@ -126,13 +124,13 @@ patch=1,EE,200FD844,extended,A320000D
 patch=1,EE,200FD848,extended,30810100
 patch=1,EE,200FD84C,extended,14200003
 patch=1,EE,200FD850,extended,00000000
-patch=1,EE,200FD854,extended,30A5F7FF
+patch=1,EE,200FD854,extended,30A57FF
 patch=1,EE,200FD858,extended,A3260011
 patch=1,EE,200FD85C,extended,30810200
 patch=1,EE,200FD860,extended,14200003
 patch=1,EE,200FD864,extended,00000000
 patch=1,EE,200FD868,extended,30A5DFFF
-patch=1,EE,200FD86C,extended,A327000D
+patch=1,EE,200FD86C,extend,327000D
 patch=1,EE,200FD870,extended,30812000
 patch=1,EE,200FD874,extended,14200003
 patch=1,EE,200FD878,extended,00000000
@@ -164,11 +162,3 @@ patch=1,EE,200FD8D8,extended,A7250002
 patch=1,EE,D04B0EB6,extended,02000000
 patch=1,EE,201221BC,extended,0803F414
 patch=1,EE,2012222C,extended,0803F600
-
-[Cheats\3 OPTIONAL - Pause/menu native-controls guard]
-description=Requires group 1. While the pause/menu flag at 0x004B0DE8 equals 1, restore the original hook instructions so pause/menu controls stay native.
-author=Zeroable
-
-patch=1,EE,D04B0DE8,extended,02000001
-patch=1,EE,201221BC,extended,24030070
-patch=1,EE,2012222C,extended,03E00008
