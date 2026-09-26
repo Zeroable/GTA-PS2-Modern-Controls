@@ -169,13 +169,12 @@ https://github.com/user-attachments/assets/b00580cb-8d17-4dae-8837-d51808d85970
 
 ### GTA III, Vice City, and San Andreas
 
-These games use three groups:
+These games use two selectable groups:
 
 - **Group 1 — Required:** vehicle controls and the shared controller hook.
 - **Group 2 — Optional:** modern on-foot controls. Leave this disabled to keep the original on-foot layout.
-- **Group 3 — Optional:** native pause/menu controls.
 
-For the complete layout, enable all three groups.
+For the complete modern layout, enable both groups. A separate pause/menu group is not required; normal pause/menu controls remain usable with the current patches.
 
 ### Liberty City Stories and Vice City Stories
 
@@ -214,7 +213,7 @@ These four games use the same modernized on-foot layout and the same overall veh
 | D-pad Right | Next weapon | Remapped to the game's native R2 / next-weapon function |
 | R3 | Look behind | **Native** |
 | Select | Change camera mode | **Native** |
-| Start | Pause menu | **Native**; the pause-menu guard restores stock menu controls |
+| Start | Pause menu | **Native** |
 | L3 | Original game function | **Native**; this differs by game (for example crouch or free aim where supported) |
 
 The core on-foot layout is therefore the same in **GTA III, Vice City, Liberty City Stories, and Vice City Stories**: L2 aims, R2 fires, R1 centers the camera, L1 selects the next weapon, and the D-pad left/right directions cycle weapons.
@@ -242,13 +241,13 @@ For the remaining D-pad directions, the current GTA III and Vice City patches su
 | D-pad Left | Unassigned by the modern layout | Native direction is suppressed while driving |
 | D-pad Down | Unassigned by the modern layout | Native direction is suppressed while driving |
 | Select | Change camera mode | **Native** |
-| Start | Pause menu | **Native**; pause/menu input is restored to stock |
+| Start | Pause menu | **Native** |
 
 Cross is intentionally available as a second handbrake button alongside R1.
 
 ### Pause menus
 
-For **GTA III** and **Vice City**, enable Group 3 to restore native controls while the pause/menu screen is open.
+For **GTA III** and **Vice City**, no separate pause/menu cheat group is required; normal menu navigation remains usable with the current patches.
 
 For **Liberty City Stories** and **Vice City Stories**, the pause guard is built directly into the patch. The pause menu automatically receives completely stock controller input.
 
@@ -285,7 +284,7 @@ San Andreas uses the same general modern layout, but its original controls are m
 | D-pad Left | Negative response | **Native** |
 | D-pad Right | Positive response | **Native** |
 | Select | Change camera mode | **Native** |
-| Start | Pause menu | **Native**; Group 3 restores stock menu controls |
+| Start | Pause menu | **Native** |
 
 The major difference from the other four games is R1: in San Andreas it becomes **Next Weapon** instead of **Center Camera**.
 
@@ -310,7 +309,7 @@ The major difference from the other four games is R1: in San Andreas it becomes 
 | D-pad Left | Previous radio station | Uses the game's native radio direction |
 | D-pad Right | Next radio station | Uses the game's native radio direction |
 | Select | **Hold for completely native vehicle controls** | See the important note below |
-| Start | Pause menu | **Native**; Group 3 restores stock menu controls |
+| Start | Pause menu | **Native** |
 
 ### Important: hold Select to temporarily restore the original vehicle controls
 
@@ -376,7 +375,7 @@ This aircraft layout applies to planes, helicopters, and the Hydra while keeping
 
 ### Pause menu
 
-Enable Group 3 in San Andreas so the pause/menu screen always receives completely native controller input.
+No separate pause/menu cheat group is required in San Andreas; normal pause/menu controls remain usable with the current patch.
 
 ---
 
@@ -384,9 +383,9 @@ Enable Group 3 in San Andreas so the pause/menu screen always receives completel
 
 | Game(s) | On-foot R1 | On-foot L1 | Vehicle Select override | Pause-menu handling |
 | --- | --- | --- | --- | --- |
-| GTA III / Vice City | Center camera | Next weapon | No | Group 3 |
+| GTA III / Vice City | Center camera | Next weapon | No | Native; no separate group |
 | Liberty City Stories / Vice City Stories | Center camera | Next weapon | No | Automatic / built in |
-| San Andreas | Next weapon | Previous weapon | **Hold Select for all native vehicle controls** | Group 3 |
+| San Andreas | Next weapon | Previous weapon | **Hold Select for all native vehicle controls** | Native; no separate group |
 
 ## Credits
 
