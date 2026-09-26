@@ -4,7 +4,7 @@ comment=Press Start + Select to open or close the map menu. While the map menu i
 comment=Release Start and Select before toggling the map again.
 comment=Cold boot required. Current build is intended for a 4:3 display.
 author=Zeroable
-[Map Toggle - Press Start and Select WIP]
+[GTA-PS2-Modern-Controls\Map Toggle - Press Start and Select WIP]
 patch=0,EE,00100074,word,24843480
 patch=0,EE,001002B4,word,24433480
 patch=0,EE,003EE884,word,006B3480
@@ -1001,7 +1001,8 @@ patch=1,EE,006B1734,word,00000000
 patch=1,EE,006B1738,word,90480358
 patch=1,EE,006B173C,word,11000002
 patch=1,EE,006B1740,word,00000000
-patch=1,EE,006B1744,word,8C420354patch=1,EE,006B1748,word,10400081
+patch=1,EE,006B1744,word,8C420354
+patch=1,EE,006B1748,word,10400081
 patch=1,EE,006B174C,word,00000000
 patch=1,EE,006B1750,word,24540030
 patch=1,EE,006B1754,word,10000002
