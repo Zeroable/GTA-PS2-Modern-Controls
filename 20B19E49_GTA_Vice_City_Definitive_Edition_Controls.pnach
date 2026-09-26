@@ -1,15 +1,15 @@
 gametitle=Grand Theft Auto: Vice City (NTSC-U Day 1 / CRC 20B19E49)
 comment=Definitive Edition-style controls for Grand Theft Auto: Vice City.
 comment=Built for the original PS2 default control scheme. Changing the in-game control type can produce different results.
-comment=Vehicle layout: L2 brake, R2 accelerate, L1 fire, R1 handbrake, Cross handbrake, Square look left, Circle look right, R3 look behind, D-pad Up vehicle sub-mission/misc, D-pad Right next station/radio.
-comment=On-foot layout: L2 targeting, R2 attack, Circle attack, L1 next weapon, R1 camera reset, D-pad Left previous weapon, D-pad Right next weapon, and R3 native.
+comment=In vehicles, D-pad Up activates the vehicle sub-mission/special action through native R3; D-pad Down passes through natively.
+comment=On foot, D-pad Down remains native; D-pad Left/Right cycle weapons and D-pad Up remains suppressed.
 comment=Target: NTSC-U Day 1 SLUS-20552, CRC 20B19E49.
 comment=Public credit: Zeroable.
 comment=The pause/menu native-controls guard is integrated into the existing groups; there is no separate pause cheat option.
 comment=Control-remapping foundation based on PS2 Controller Remapper by pelvicthrustman.
 
 [GTA-PS2-Modern-Controls\Definitive Edition Controls\1 REQUIRED - Definitive Edition vehicle controls]
-description=Required vehicle controls. In vehicles: L2 brake, R2 accelerate, L1 fire, R1 or Cross handbrake, Square/Circle look left/right, R3 looks behind, D-pad Up activates the vehicle sub-mission or special action, and D-pad Right selects the next radio station. Native D-pad Left/Down are suppressed during gameplay. On-foot controls remain stock unless group 2 is enabled.
+description=Required vehicle controls. In vehicles: L2 brake, R2 accelerate, L1 fire, R1 or Cross handbrake, Square/Circle look left/right, and R3 looks behind. D-pad Up activates the vehicle sub-mission/special action through native R3, D-pad Down passes through natively for shortcut use, D-pad Right selects the next radio station, and D-pad Left remains suppressed. On-foot controls remain stock unless group 2 is enabled.
 author=Zeroable
 
 patch=1,EE,200FD050,extended,00C0C821
@@ -17,7 +17,7 @@ patch=1,EE,200FD054,extended,08048871
 patch=1,EE,200FD058,extended,24030070
 
 patch=1,EE,200FD05C,extended,87240002
-patch=1,EE,200FD060,extended,3485EFF4
+patch=1,EE,200FD060,extended,3485EFB4
 patch=1,EE,200FD064,extended,93260012
 patch=1,EE,200FD068,extended,93270013
 patch=1,EE,200FD06C,extended,93280010
@@ -31,7 +31,7 @@ patch=1,EE,200FD088,extended,240F00FF
 patch=1,EE,200FD08C,extended,A3200008
 patch=1,EE,200FD090,extended,A3200009
 patch=1,EE,200FD094,extended,A320000A
-patch=1,EE,200FD098,extended,A320000B
+patch=1,EE,200FD098,extended,00000000
 patch=1,EE,200FD09C,extended,A3200010
 patch=1,EE,200FD0A0,extended,A3200011
 patch=1,EE,200FD0A4,extended,A3200012
@@ -105,11 +105,11 @@ patch=1,EE,201221BC,extended,24030070
 patch=1,EE,2012222C,extended,03E00008
 
 [GTA-PS2-Modern-Controls\Definitive Edition Controls\2 OPTIONAL - Definitive Edition on-foot controls]
-description=Requires group 1. On foot: L2 targeting, R2 attack, Circle attack, L1 next weapon/native R2, R1 camera reset/native L1, D-pad Left previous weapon/native L2, and D-pad Right next weapon/native R2. Native D-pad Up/Down are suppressed during gameplay. R3 remains native.
+description=Requires group 1. On foot: L2 targeting, R2 attack, Circle attack, L1 next weapon/native R2, R1 camera reset/native L1, D-pad Left previous weapon/native L2, and D-pad Right next weapon/native R2. D-pad Down passes through natively for shortcut use; D-pad Up remains suppressed. R3 remains native.
 author=Zeroable
 
 patch=1,EE,200FD800,extended,87240002
-patch=1,EE,200FD804,extended,34852FF0
+patch=1,EE,200FD804,extended,34852FB0
 patch=1,EE,200FD808,extended,93260012
 patch=1,EE,200FD80C,extended,93270013
 patch=1,EE,200FD810,extended,93280010
@@ -120,7 +120,7 @@ patch=1,EE,200FD820,extended,932C0008
 patch=1,EE,200FD824,extended,A3200008
 patch=1,EE,200FD828,extended,A3200009
 patch=1,EE,200FD82C,extended,A320000A
-patch=1,EE,200FD830,extended,A320000B
+patch=1,EE,200FD830,extended,00000000
 patch=1,EE,200FD834,extended,A3200010
 patch=1,EE,200FD838,extended,A3200011
 patch=1,EE,200FD83C,extended,A3200012
