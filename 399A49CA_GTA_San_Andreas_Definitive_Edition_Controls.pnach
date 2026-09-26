@@ -1,16 +1,16 @@
 gametitle=Grand Theft Auto: San Andreas (NTSC-U SLUS-20946 / CRC 399A49CA)
 comment=Definitive Edition-style controls for Grand Theft Auto: San Andreas.
 comment=Built for the original PS2 default control scheme. Changing the in-game control type can produce different results.
-comment=Hold Select in any vehicle to temporarily restore native controls, including the D-pad for prompts that require a directional response.
+comment=Hold Select in any vehicle to temporarily restore only the native D-pad; all other vehicle buttons keep the modern mapping.
 comment=Aircraft: L1 and R1 stay native, R2 maps to native Cross, and physical Cross maps to native Circle/fire with full pressure.
 comment=Bikes: R2 accelerates, L2 brakes, Cross/Square retain their native actions, D-pad Left/Right look left/right, and R3 looks behind.
 comment=Other vehicles: R2 accelerate, L2 brake/reverse, R1 or Cross handbrake, L1 main fire, D-pad Down alternate fire, D-pad Right/Left next/previous radio, D-pad Up sub-mission/special action, Square/Circle look left/right, and R3 looks behind.
-comment=On foot: R2 fires, L2 aims, L1 selects the previous weapon, and R1 selects the next weapon. D-pad and R3 stay native.
+comment=On foot: D-pad Left selects the previous weapon and D-pad Right selects the next weapon. Hold Select to temporarily restore the native on-foot functions of D-pad Left/Right; all existing shoulder remaps remain active.
 comment=Public credit: Zeroable.
 comment=Control-remapping foundation based on PS2 Controller Remapper by pelvicthrustman.
 
 [GTA-PS2-Modern-Controls\Definitive Edition Controls\1 REQUIRED - Definitive Edition vehicle controls]
-description=Required vehicle controls. Bikes and aircraft use vehicle-specific layouts; all other vehicles use the standard modern layout. Hold Select in vehicles to temporarily restore native controls and D-pad input. On-foot controls remain stock unless group 2 is enabled.
+description=Required vehicle controls. Bikes and aircraft use vehicle-specific layouts; all other vehicles use the standard modern layout. Hold Select in vehicles to restore only native D-pad input while all other mapped buttons remain modern. On-foot controls remain stock unless group 2 is enabled.
 author=Zeroable
 
 patch=1,EE,200FD050,extended,00C0C821
@@ -116,7 +116,7 @@ patch=1,EE,200FD2C8,extended,00000000
 
 patch=1,EE,200FD300,extended,87240002
 patch=1,EE,200FD304,extended,30810001
-patch=1,EE,200FD308,extended,1020FF79
+patch=1,EE,200FD308,extended,1020003D
 patch=1,EE,200FD30C,extended,00000000
 patch=1,EE,200FD310,extended,3485C3A4
 patch=1,EE,200FD314,extended,93260012
@@ -171,9 +171,50 @@ patch=1,EE,200FD3D4,extended,A32C0013
 patch=1,EE,200FD3D8,extended,03E00008
 patch=1,EE,200FD3DC,extended,A7250002
 
+// Select-held bike path.
+// Only the native D-pad is restored. R2/L2/Cross/Square/R3 keep the modern bike mapping.
+patch=1,EE,200FD400,extended,3485C304
+patch=1,EE,200FD404,extended,93260012
+patch=1,EE,200FD408,extended,93270013
+patch=1,EE,200FD40C,extended,9328000E
+patch=1,EE,200FD410,extended,9329000F
+patch=1,EE,200FD414,extended,240C00FF
+patch=1,EE,200FD418,extended,A3200012
+patch=1,EE,200FD41C,extended,A3200013
+patch=1,EE,200FD420,extended,A320000E
+patch=1,EE,200FD424,extended,A320000F
+patch=1,EE,200FD428,extended,30810200
+patch=1,EE,200FD42C,extended,14200003
+patch=1,EE,200FD430,extended,00000000
+patch=1,EE,200FD434,extended,30A5BFFF
+patch=1,EE,200FD438,extended,A327000E
+patch=1,EE,200FD43C,extended,30814000
+patch=1,EE,200FD440,extended,14200003
+patch=1,EE,200FD444,extended,00000000
+patch=1,EE,200FD448,extended,30A5BFFF
+patch=1,EE,200FD44C,extended,A328000E
+patch=1,EE,200FD450,extended,30810100
+patch=1,EE,200FD454,extended,14200003
+patch=1,EE,200FD458,extended,00000000
+patch=1,EE,200FD45C,extended,30A57FFF
+patch=1,EE,200FD460,extended,A326000F
+patch=1,EE,200FD464,extended,30818000
+patch=1,EE,200FD468,extended,14200003
+patch=1,EE,200FD46C,extended,00000000
+patch=1,EE,200FD470,extended,30A57FFF
+patch=1,EE,200FD474,extended,A329000F
+patch=1,EE,200FD478,extended,30810004
+patch=1,EE,200FD47C,extended,14200004
+patch=1,EE,200FD480,extended,00000000
+patch=1,EE,200FD484,extended,30A5FCFF
+patch=1,EE,200FD488,extended,A32C0012
+patch=1,EE,200FD48C,extended,A32C0013
+patch=1,EE,200FD490,extended,03E00008
+patch=1,EE,200FD494,extended,A7250002
+
 patch=1,EE,200FD500,extended,87240002
 patch=1,EE,200FD504,extended,30810001
-patch=1,EE,200FD508,extended,1020FEF9
+patch=1,EE,200FD508,extended,1020007D
 patch=1,EE,200FD50C,extended,00000000
 patch=1,EE,200FD510,extended,3485EFF4
 patch=1,EE,200FD514,extended,93260012
@@ -262,9 +303,71 @@ patch=1,EE,200FD65C,extended,A3230013
 patch=1,EE,200FD660,extended,03E00008
 patch=1,EE,200FD664,extended,A7250002
 
+// Select-held normal-vehicle path.
+// Only the native D-pad is restored. All other vehicle buttons keep the modern mapping.
+patch=1,EE,200FD700,extended,3485EF04
+patch=1,EE,200FD704,extended,93260012
+patch=1,EE,200FD708,extended,93270013
+patch=1,EE,200FD70C,extended,93280010
+patch=1,EE,200FD710,extended,93290011
+patch=1,EE,200FD714,extended,932A000E
+patch=1,EE,200FD718,extended,932B000F
+patch=1,EE,200FD71C,extended,932C000D
+patch=1,EE,200FD720,extended,240300FF
+patch=1,EE,200FD724,extended,A3200010
+patch=1,EE,200FD728,extended,A3200011
+patch=1,EE,200FD72C,extended,A3200012
+patch=1,EE,200FD730,extended,A3200013
+patch=1,EE,200FD734,extended,A320000D
+patch=1,EE,200FD738,extended,A320000E
+patch=1,EE,200FD73C,extended,A320000F
+patch=1,EE,200FD740,extended,30810100
+patch=1,EE,200FD744,extended,14200003
+patch=1,EE,200FD748,extended,00000000
+patch=1,EE,200FD74C,extended,30A57FFF
+patch=1,EE,200FD750,extended,A326000F
+patch=1,EE,200FD754,extended,30810200
+patch=1,EE,200FD758,extended,14200003
+patch=1,EE,200FD75C,extended,00000000
+patch=1,EE,200FD760,extended,30A5BFFF
+patch=1,EE,200FD764,extended,A327000E
+patch=1,EE,200FD768,extended,30810800
+patch=1,EE,200FD76C,extended,14200003
+patch=1,EE,200FD770,extended,00000000
+patch=1,EE,200FD774,extended,30A5F7FF
+patch=1,EE,200FD778,extended,A3290011
+patch=1,EE,200FD77C,extended,30814000
+patch=1,EE,200FD780,extended,14200003
+patch=1,EE,200FD784,extended,00000000
+patch=1,EE,200FD788,extended,30A5F7FF
+patch=1,EE,200FD78C,extended,A32A0011
+patch=1,EE,200FD790,extended,30810400
+patch=1,EE,200FD794,extended,14200003
+patch=1,EE,200FD798,extended,00000000
+patch=1,EE,200FD79C,extended,30A5DFFF
+patch=1,EE,200FD7A0,extended,A328000D
+patch=1,EE,200FD7A4,extended,30818000
+patch=1,EE,200FD7A8,extended,14200003
+patch=1,EE,200FD7AC,extended,00000000
+patch=1,EE,200FD7B0,extended,30A5FEFF
+patch=1,EE,200FD7B4,extended,A32B0012
+patch=1,EE,200FD7B8,extended,30812000
+patch=1,EE,200FD7BC,extended,14200003
+patch=1,EE,200FD7C0,extended,00000000
+patch=1,EE,200FD7C4,extended,30A5FDFF
+patch=1,EE,200FD7C8,extended,A32C0013
+patch=1,EE,200FD7CC,extended,30810004
+patch=1,EE,200FD7D0,extended,14200004
+patch=1,EE,200FD7D4,extended,00000000
+patch=1,EE,200FD7D8,extended,30A5FCFF
+patch=1,EE,200FD7DC,extended,A3230012
+patch=1,EE,200FD7E0,extended,A3230013
+patch=1,EE,200FD7E4,extended,03E00008
+patch=1,EE,200FD7E8,extended,A7250002
+
 patch=1,EE,200FD900,extended,87240002
 patch=1,EE,200FD904,extended,30810001
-patch=1,EE,200FD908,extended,1020FDF9
+patch=1,EE,200FD908,extended,1020007D
 patch=1,EE,200FD90C,extended,00000000
 patch=1,EE,200FD910,extended,3485E3F4
 patch=1,EE,200FD914,extended,93260012
@@ -339,6 +442,54 @@ patch=1,EE,200FDA24,extended,A3230013
 patch=1,EE,200FDA28,extended,03E00008
 patch=1,EE,200FDA2C,extended,A7250002
 
+// Select-held aircraft path.
+// Only the native D-pad is restored. All other aircraft buttons keep the modern mapping.
+patch=1,EE,200FDB00,extended,3485E304
+patch=1,EE,200FDB04,extended,93260012
+patch=1,EE,200FDB08,extended,93270013
+patch=1,EE,200FDB0C,extended,932A000E
+patch=1,EE,200FDB10,extended,932B000F
+patch=1,EE,200FDB14,extended,932C000D
+patch=1,EE,200FDB18,extended,240300FF
+patch=1,EE,200FDB1C,extended,A3200012
+patch=1,EE,200FDB20,extended,A3200013
+patch=1,EE,200FDB24,extended,A320000D
+patch=1,EE,200FDB28,extended,A320000E
+patch=1,EE,200FDB2C,extended,A320000F
+patch=1,EE,200FDB30,extended,30810100
+patch=1,EE,200FDB34,extended,14200003
+patch=1,EE,200FDB38,extended,00000000
+patch=1,EE,200FDB3C,extended,30A57FFF
+patch=1,EE,200FDB40,extended,A326000F
+patch=1,EE,200FDB44,extended,30810200
+patch=1,EE,200FDB48,extended,14200003
+patch=1,EE,200FDB4C,extended,00000000
+patch=1,EE,200FDB50,extended,30A5BFFF
+patch=1,EE,200FDB54,extended,A327000E
+patch=1,EE,200FDB58,extended,30814000
+patch=1,EE,200FDB5C,extended,14200003
+patch=1,EE,200FDB60,extended,00000000
+patch=1,EE,200FDB64,extended,30A5DFFF
+patch=1,EE,200FDB68,extended,A323000D
+patch=1,EE,200FDB6C,extended,30818000
+patch=1,EE,200FDB70,extended,14200003
+patch=1,EE,200FDB74,extended,00000000
+patch=1,EE,200FDB78,extended,30A5FEFF
+patch=1,EE,200FDB7C,extended,A32B0012
+patch=1,EE,200FDB80,extended,30812000
+patch=1,EE,200FDB84,extended,14200003
+patch=1,EE,200FDB88,extended,00000000
+patch=1,EE,200FDB8C,extended,30A5FDFF
+patch=1,EE,200FDB90,extended,A32C0013
+patch=1,EE,200FDB94,extended,30810004
+patch=1,EE,200FDB98,extended,14200004
+patch=1,EE,200FDB9C,extended,00000000
+patch=1,EE,200FDBA0,extended,30A5FCFF
+patch=1,EE,200FDBA4,extended,A3230012
+patch=1,EE,200FDBA8,extended,A3230013
+patch=1,EE,200FDBAC,extended,03E00008
+patch=1,EE,200FDBB0,extended,A7250002
+
 patch=1,EE,D066BB4A,extended,02100000
 patch=1,EE,205325CC,extended,0803F414
 patch=1,EE,20532674,extended,0803F448
@@ -348,7 +499,7 @@ patch=1,EE,205325CC,extended,24030070
 patch=1,EE,20532674,extended,03E00008
 
 [GTA-PS2-Modern-Controls\Definitive Edition Controls\2 OPTIONAL - Definitive Edition on-foot controls]
-description=Requires group 1. On foot: physical R2->native L1/fire, physical L2->native R1/aim, physical L1->native L2/previous weapon, and physical R1->native R2/next weapon. D-pad and R3 stay native.
+description=Requires group 1. Existing shoulder remap remains. Normally D-pad Left selects the previous weapon and D-pad Right selects the next weapon while their native D-pad actions are suppressed. Hold Select to temporarily restore the native functions of D-pad Left/Right only.
 author=Zeroable
 
 patch=1,EE,200FDD00,extended,0803F760
@@ -383,10 +534,35 @@ patch=1,EE,200FDDC8,extended,30810200
 patch=1,EE,200FDDCC,extended,34A30400
 patch=1,EE,200FDDD0,extended,0061280B
 patch=1,EE,200FDDD4,extended,A3290010
-patch=1,EE,200FDDD8,extended,03E00008
-patch=1,EE,200FDDDC,extended,A7250002
+patch=1,EE,200FDDD8,extended,0803F780
+patch=1,EE,200FDDDC,extended,00000000
+
+// On-foot D-pad weapon cycling + Select native fallback.
+// Normal: D-pad Left -> native L2 / previous weapon; D-pad Right -> native R2 / next weapon.
+// Native D-pad Left/Right actions are suppressed during normal play; Up/Down remain native.
+// Hold Select: D-pad Left/Right pass through natively again for NPC replies/prompts/edge cases.
+// Existing physical L1/R1 weapon cycling remains valid and is not replaced by the D-pad mirrors.
+patch=1,EE,200FDE00,extended,30810001
+patch=1,EE,200FDE04,extended,10200010
+patch=1,EE,200FDE08,extended,00000000
+patch=1,EE,200FDE0C,extended,932A0009
+patch=1,EE,200FDE10,extended,932B0008
+patch=1,EE,200FDE14,extended,34A500A0
+patch=1,EE,200FDE18,extended,A3200009
+patch=1,EE,200FDE1C,extended,A3200008
+patch=1,EE,200FDE20,extended,30810080
+patch=1,EE,200FDE24,extended,14200003
+patch=1,EE,200FDE28,extended,00000000
+patch=1,EE,200FDE2C,extended,30A5FEFF
+patch=1,EE,200FDE30,extended,A32A0012
+patch=1,EE,200FDE34,extended,30810020
+patch=1,EE,200FDE38,extended,14200003
+patch=1,EE,200FDE3C,extended,00000000
+patch=1,EE,200FDE40,extended,30A5FDFF
+patch=1,EE,200FDE44,extended,A32B0013
+patch=1,EE,200FDE48,extended,03E00008
+patch=1,EE,200FDE4C,extended,A7250002
 
 patch=1,EE,D066BB4A,extended,02000000
 patch=1,EE,205325CC,extended,0803F414
 patch=1,EE,20532674,extended,0803F740
-
