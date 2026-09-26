@@ -1,6 +1,7 @@
 gametitle=Grand Theft Auto: San Andreas (NTSC-U SLUS-20946 / CRC 399A49CA)
 comment=Definitive Edition-style controls for Grand Theft Auto: San Andreas.
 comment=Built for the original PS2 default control scheme. Changing the in-game control type can produce different results.
+comment=The pause/menu native-controls guard is integrated automatically; there is no separate pause-guard cheat option.
 comment=Hold Select in any vehicle to temporarily restore only the native D-pad; all other vehicle buttons keep the modern mapping.
 comment=Aircraft: L1 and R1 stay native, R2 maps to native Cross, and physical Cross maps to native Circle/fire with full pressure.
 comment=Bikes: R2 accelerates, L2 brakes, Cross/Square retain their native actions, D-pad Left/Right look left/right, and R3 looks behind.
@@ -20,7 +21,7 @@ patch=1,EE,200FD058,extended,24030070
 patch=1,EE,200FD0F0,extended,03E00008
 patch=1,EE,200FD0F4,extended,00000000
 
-patch=1,EE,200FD120,extended,0803F460
+patch=1,EE,200FD120,extended,0803F450
 patch=1,EE,200FD124,extended,00000000
 
 patch=1,EE,200FD140,extended,3C080067
@@ -502,7 +503,7 @@ patch=1,EE,20532674,extended,03E00008
 description=Requires group 1. Existing shoulder remap remains. Normally D-pad Left selects the previous weapon and D-pad Right selects the next weapon while their native D-pad actions are suppressed. Hold Select to temporarily restore the native functions of D-pad Left/Right only.
 author=Zeroable
 
-patch=1,EE,200FDD00,extended,0803F760
+patch=1,EE,200FDD00,extended,0803F748
 patch=1,EE,200FDD04,extended,00000000
 
 patch=1,EE,200FDD20,extended,3C080067
