@@ -6,7 +6,7 @@ comment=With stock controls, Look Backward is R3 on foot and L1 + R1 in vehicles
 comment=Select by itself cycles the Orbit camera distance.
 comment=On foot, the camera modes are Normal / Orbit / First Person. In vehicles, the camera modes are Normal / Orbit.
 comment=Requires a full restart and memory-card load.
-[Right Stick Camera and First Person - WIP]
+[GTA-PS2-Modern-Controls\Right Stick Camera and First Person - Cycle with Select and R3]
 description=Use Select + Look Backward to cycle camera modes. With the modern-controls patch, Look Backward is always R3. Select alone cycles Orbit distance. On foot: Normal/Orbit/First Person. Vehicles: Normal/Orbit. Requires a full restart and memory-card load.
 author=Zeroable
 patch=0,EE,00100074,word,24846880
