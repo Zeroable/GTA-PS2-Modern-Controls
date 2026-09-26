@@ -1,7 +1,6 @@
-gametitle=Grand Theft Auto III (NTSC-U SLUS-20062 / CRC 5E115FB6)
-comment=Work in progress. Hides the GTA III HUD and minimap/radar.
+gametitle=Grand Theft Auto III (USA) SLUS-20062
 
-[Cheats\No HUD + Radar - WIP]
+[GTA-PS2-Modern-Controls\No HUD + Radar]
 description=Hides the GTA III HUD and minimap/radar.
 author=Zeroable
 
