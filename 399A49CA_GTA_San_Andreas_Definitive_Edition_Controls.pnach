@@ -1,17 +1,15 @@
 gametitle=Grand Theft Auto: San Andreas (NTSC-U SLUS-20946 / CRC 399A49CA)
 comment=Definitive Edition-style controls for Grand Theft Auto: San Andreas.
 comment=Built for the original PS2 default control scheme. Changing the in-game control type can produce different results.
-comment=Enable group 1 for vehicle controls, group 2 for on-foot controls, and group 3 for native pause/menu input.
 comment=Hold Select in any vehicle to temporarily restore native controls, including the D-pad for prompts that require a directional response.
 comment=Aircraft: L1 and R1 stay native, R2 maps to native Cross, and physical Cross maps to native Circle/fire with full pressure.
 comment=Bikes: R2 accelerates, L2 brakes, Cross/Square retain their native actions, D-pad Left/Right look left/right, and R3 looks behind.
 comment=Other vehicles: R2 accelerate, L2 brake/reverse, R1 or Cross handbrake, L1 main fire, D-pad Down alternate fire, D-pad Right/Left next/previous radio, D-pad Up sub-mission/special action, Square/Circle look left/right, and R3 looks behind.
 comment=On foot: R2 fires, L2 aims, L1 selects the previous weapon, and R1 selects the next weapon. D-pad and R3 stay native.
-comment=The pause/menu guard returns native pad input while paused.
 comment=Public credit: Zeroable.
 comment=Control-remapping foundation based on PS2 Controller Remapper by pelvicthrustman.
 
-[Cheats\1 REQUIRED - Definitive Edition vehicle controls]
+[GTA-PS2-Modern-Controls\Definitive Edition Controls\1 REQUIRED - Definitive Edition vehicle controls]
 description=Required vehicle controls. Bikes and aircraft use vehicle-specific layouts; all other vehicles use the standard modern layout. Hold Select in vehicles to temporarily restore native controls and D-pad input. On-foot controls remain stock unless group 2 is enabled.
 author=Zeroable
 
@@ -349,7 +347,7 @@ patch=1,EE,D066BB4A,extended,02000000
 patch=1,EE,205325CC,extended,24030070
 patch=1,EE,20532674,extended,03E00008
 
-[Cheats\2 OPTIONAL - Definitive Edition on-foot controls]
+[GTA-PS2-Modern-Controls\Definitive Edition Controls\2 OPTIONAL - Definitive Edition on-foot controls]
 description=Requires group 1. On foot: physical R2->native L1/fire, physical L2->native R1/aim, physical L1->native L2/previous weapon, and physical R1->native R2/next weapon. D-pad and R3 stay native.
 author=Zeroable
 
@@ -392,12 +390,3 @@ patch=1,EE,D066BB4A,extended,02000000
 patch=1,EE,205325CC,extended,0803F414
 patch=1,EE,20532674,extended,0803F740
 
-[Cheats\3 OPTIONAL - Pause/menu native-controls guard]
-description=Requires group 1. While the pause/menu flag at 0x0066BA3C equals 1, keep the hook installed and return native pad input.
-author=Zeroable
-
-patch=1,EE,200FD120,extended,0803F450
-patch=1,EE,200FD124,extended,00000000
-
-patch=1,EE,200FDD00,extended,0803F748
-patch=1,EE,200FDD04,extended,00000000
