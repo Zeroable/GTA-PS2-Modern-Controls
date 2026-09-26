@@ -161,13 +161,11 @@ Current controls and status:
 - First Person currently applies **on foot only**.
 - A full restart and memory-card load are required.
 
-#### Demonstration videos
+#### Demonstration video
 
-These videos demonstrate the current **Vice City right-stick camera** and **first-person** work:
+This video demonstrates the current **Vice City right-stick camera** and **first-person** work:
 
-https://github.com/user-attachments/assets/c2683745-0835-40fb-9e9d-76b44173263b
-
-https://github.com/user-attachments/assets/b00580cb-8d17-4dae-8837-d51808d85970
+https://github.com/user-attachments/assets/647da0ea-b225-4436-82e1-7636dfb32a2c
 
 ## Cheat groups and pause-menu behavior
 
