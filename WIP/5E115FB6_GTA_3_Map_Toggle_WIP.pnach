@@ -1,6 +1,7 @@
 gametitle=Grand Theft Auto III (USA) - SLUS-20062 / 5E115FB6
 // Map Toggle 1.0 release candidate. Cold boot required. See README.md.
 // Uses original radar tiles and HUD sprites; no ISO modification.
+// Public credit: Zeroable.
 
 [GTA-PS2-Modern-Controls\Map Toggle\Enable - Press Start and Select/Cross to Toggle Icons]
 description=Start + Select opens/closes the map. Cross hides/shows location icons.
