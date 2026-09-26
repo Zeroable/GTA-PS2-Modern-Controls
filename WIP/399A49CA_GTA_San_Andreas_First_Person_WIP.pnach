@@ -1,22 +1,24 @@
-gametitle=Grand Theft Auto: San Andreas (NTSC-U SLUS-20946 / CRC 399A49CA)
-comment=Work in progress. Adds an on-foot first-person view with free vertical look.
-comment=Use First Person - Free Vertical Look as the main group. The optional Hide Body group hides CJ's body while keeping weapons on their normal draw path.
-comment=Switch camera to restore the body. Fully restart with the relevant cheat disabled to completely remove its hooks.
-comment=Disable other camera cheats while using this patch.
+gametitle=Grand Theft Auto - San Andreas (NTSC-U) SLUS-20946 [399A49CA]
 
-[Cheats\First Person - Free Vertical Look]
+[GTA-PS2-Modern-Controls\First Person\Enable]
 author=Zeroable
-description=Closest on-foot camera with free vertical look. Default distance -2.35; height +0.65. Disable other camera cheats. Fully restart the game with this cheat disabled to completely remove the patch.
+description=Closest on-foot camera with free vertical look. Default distance -2.35; height +0.65. Disable other camera cheats. Fully restart the game with this cheat disabled to undo the instruction patch.
+// Restore the verified original follow-ped instruction by default.
 patch=1,EE,202095E0,extended,461F0040
+// Apply only when closest zoom is selected and CCam0 is FOLLOWPED (mode 4).
 patch=1,EE,E0040001,extended,006FE5F8
 patch=1,EE,E0030004,extended,006FE6B0
+// Retain the previous clearance position; do not freeze any pitch field.
 patch=1,EE,206FE780,extended,C0166666
 patch=1,EE,206FE78C,extended,3F266666
+// add.s f1,f0,f2: current pitch + smoothed vertical input * time step.
+// Original: add.s f1,f0,f31, where f31 is the follow-camera correction.
 patch=1,EE,202095E0,extended,46020040
 
-[Cheats\First Person - Hide Body]
+[GTA-PS2-Modern-Controls\First Person\Hide Body]
 author=Zeroable
 description=Optional whole-body hiding in the closest on-foot free-look view. Requires First Person - Free Vertical Look. Weapons use their normal draw path. Switch camera to restore the body; fully restart with this option disabled to uninstall its hooks.
+// Player-only body draw guard; reserves 000F1000-000F105F.
 patch=1,EE,200F1000,extended,3C020071
 patch=1,EE,200F1004,extended,8C4295D0
 patch=1,EE,200F1008,extended,14820013
@@ -41,5 +43,6 @@ patch=1,EE,200F1050,extended,03E00008
 patch=1,EE,200F1054,extended,00000000
 patch=1,EE,200F1058,extended,0808C4D8
 patch=1,EE,200F105C,extended,00000000
+// Redirect the normal and vision-effect body draws, retaining their delay slots.
 patch=1,EE,2019BBC0,extended,0C03C400
 patch=1,EE,2019BBD8,extended,0C03C400
