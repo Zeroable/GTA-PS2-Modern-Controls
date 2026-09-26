@@ -281,12 +281,14 @@ San Andreas uses the same general modern layout, but its original controls are m
 | R3 | Look behind | **Native** |
 | D-pad Up | Gang active mode | **Native** |
 | D-pad Down | Gang passive mode | **Native** |
-| D-pad Left | Negative response | **Native** |
-| D-pad Right | Positive response | **Native** |
-| Select | Change camera mode | **Native** |
+| D-pad Left | Previous weapon | Mirrors native L2 / previous weapon; hold Select to use native D-pad Left / negative response |
+| D-pad Right | Next weapon | Mirrors native R2 / next weapon; hold Select to use native D-pad Right / positive response |
+| Select | Change camera mode / native D-pad fallback | **Native** by itself; while held, D-pad Left/Right temporarily use their original game functions |
 | Start | Pause menu | **Native** |
 
 The major difference from the other four games is R1: in San Andreas it becomes **Next Weapon** instead of **Center Camera**.
+
+D-pad Left and Right also mirror **Previous Weapon** and **Next Weapon** during normal on-foot play. To preserve the game's original directional-response functions and avoid edge cases where native Left/Right are required, hold **Select** while pressing D-pad Left or Right to temporarily pass those directions through natively.
 
 ### Standard vehicles
 
@@ -308,18 +310,18 @@ The major difference from the other four games is R1: in San Andreas it becomes 
 | D-pad Down | Alternate fire / turbo | Mapped to native L1 |
 | D-pad Left | Previous radio station | Uses the game's native radio direction |
 | D-pad Right | Next radio station | Uses the game's native radio direction |
-| Select | **Hold for completely native vehicle controls** | See the important note below |
+| Select | **Hold to restore native D-pad only** | Other vehicle buttons keep the modern mapping while Select is held |
 | Start | Pause menu | **Native** |
 
-### Important: hold Select to temporarily restore the original vehicle controls
+### Important: hold Select to temporarily restore the native D-pad
 
-While driving in San Andreas, **hold Select to give every button its original/native function for as long as Select is held**. Release Select and the modern controls immediately return.
+While driving in San Andreas, **hold Select to restore only the original/native D-pad directions**. Every other vehicle button keeps the modern mapping while Select is held. Release Select and the D-pad immediately returns to the modern vehicle layout.
 
-This is not just a convenience feature. The modern vehicle layout reuses the **native D-pad Left and D-pad Right inputs**, so those original left/right responses are otherwise unavailable while driving.
+This is not just a convenience feature. The modern vehicle layout reuses native D-pad inputs, so some original directional responses are otherwise unavailable while driving.
 
 That can matter during dates. A girlfriend can ask CJ a question while he is in a vehicle and expect a **left/right D-pad response**. Without a way to send the original D-pad input, the interaction can become a soft lock because there is no valid way to answer.
 
-If that happens, simply **hold Select and press the required native D-pad direction**.
+If that happens, simply **hold Select and press the required native D-pad direction**. Acceleration, braking, firing, camera-look buttons, and the other modern vehicle mappings remain modern while Select is held.
 
 ### Bikes
 
@@ -341,7 +343,7 @@ If that happens, simply **hold Select and press the required native D-pad direct
 | L3 | Original bike-specific action | **Native** |
 | D-pad Up | Original bike/vehicle action | **Native** |
 | D-pad Down | Original bike/vehicle action | **Native** |
-| Select | **Hold for completely native controls** | Same native override as other vehicles |
+| Select | **Hold to restore native D-pad only** | All other vehicle buttons remain on the modern mapping |
 | Start | Pause menu | **Native** |
 
 Cross and Square remain usable for their original bike actions in addition to the trigger mappings. On bicycles, tapping Cross can still be useful for faster pedaling.
@@ -368,7 +370,7 @@ Aircraft preserve physical L1 and R1 as native inputs because aircraft use those
 | D-pad Down | Native L1 / alternate fire | Aircraft-specific secondary function |
 | D-pad Left | Native D-pad Up | Previous-direction function used by the original aircraft controls |
 | D-pad Right | Native D-pad Down | Next-direction function used by the original aircraft controls |
-| Select | **Hold for completely native controls** | Same native override as other vehicles |
+| Select | **Hold to restore native D-pad only** | All other vehicle buttons remain on the modern mapping |
 | Start | Pause menu | **Native** |
 
 This aircraft layout applies to planes, helicopters, and the Hydra while keeping native L1/R1 functions available.
@@ -385,7 +387,7 @@ No separate pause/menu cheat group is required in San Andreas; normal pause/menu
 | --- | --- | --- | --- | --- |
 | GTA III / Vice City | Center camera | Next weapon | No | Native; no separate group |
 | Liberty City Stories / Vice City Stories | Center camera | Next weapon | No | Automatic / built in |
-| San Andreas | Next weapon | Previous weapon | **Hold Select for all native vehicle controls** | Native; no separate group |
+| San Andreas | Next weapon | Previous weapon | **Hold Select for native D-pad only** | Native; no separate group |
 
 ## Credits
 
