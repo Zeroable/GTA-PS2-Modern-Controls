@@ -223,7 +223,7 @@ These four games use the same modernized on-foot layout and the same overall veh
 
 The core on-foot layout is therefore the same in **GTA III, Vice City, Liberty City Stories, and Vice City Stories**: L2 aims, R2 fires, R1 centers the camera, L1 selects the next weapon, and the D-pad left/right directions cycle weapons.
 
-For the remaining D-pad directions, the current GTA III and Vice City patches suppress D-pad Up/Down while the on-foot remap is active. Liberty City Stories and Vice City Stories leave those directions native.
+For the remaining D-pad directions, the current GTA III and Vice City patches suppress D-pad Up while the on-foot remap is active, but D-pad Down passes through natively. Liberty City Stories and Vice City Stories leave those directions native.
 
 ### In vehicles
 
@@ -241,14 +241,14 @@ For the remaining D-pad directions, the current GTA III and Vice City patches su
 | Triangle | Exit vehicle | **Native** |
 | L3 | Horn / siren where supported | **Native** |
 | R3 | Look behind | Mapped to the game's native left+right look input |
-| D-pad Up | Vehicle sub-mission / special action | Moved from the game's native R3 vehicle action |
+| D-pad Up | Vehicle sub-mission / special action | GTA III / Vice City: moved from native R3; Stories titles retain their current patch behavior |
 | D-pad Right | Next radio station | Moved from the game's native radio control |
 | D-pad Left | Unassigned by the modern layout | Native direction is suppressed while driving |
-| D-pad Down | Unassigned by the modern layout | Native direction is suppressed while driving |
+| D-pad Down | Original game function | GTA III / Vice City: **Native**; Stories titles retain their current patch behavior |
 | Select | Change camera mode | **Native** |
 | Start | Pause menu | **Native** |
 
-Cross is intentionally available as a second handbrake button alongside R1.
+Cross is intentionally available as a second handbrake button alongside R1. In GTA III and Vice City, D-pad Down now passes through natively in vehicles so it remains available for game functions or external mod shortcuts, while D-pad Up still triggers the mapped vehicle sub-mission/special action.
 
 ### Pause menus
 
