@@ -174,7 +174,7 @@ These games use two selectable groups:
 - **Group 1 — Required:** vehicle controls and the shared controller hook.
 - **Group 2 — Optional:** modern on-foot controls. Leave this disabled to keep the original on-foot layout.
 
-For the complete modern layout, enable both groups. A separate pause/menu group is not required; normal pause/menu controls remain usable with the current patches.
+For the complete modern layout, enable both groups. The pause/menu guard is integrated into the patches and automatically restores stock controller input while the pause/menu screen is open, so there is no separate pause/menu cheat option.
 
 ### Liberty City Stories and Vice City Stories
 
@@ -247,7 +247,7 @@ Cross is intentionally available as a second handbrake button alongside R1.
 
 ### Pause menus
 
-For **GTA III** and **Vice City**, no separate pause/menu cheat group is required; normal menu navigation remains usable with the current patches.
+For **GTA III** and **Vice City**, the pause guard is integrated directly into the existing control groups. While the pause/menu screen is open, the game automatically receives completely stock controller input; there is no separate pause-menu cheat option.
 
 For **Liberty City Stories** and **Vice City Stories**, the pause guard is built directly into the patch. The pause menu automatically receives completely stock controller input.
 
@@ -377,7 +377,7 @@ This aircraft layout applies to planes, helicopters, and the Hydra while keeping
 
 ### Pause menu
 
-No separate pause/menu cheat group is required in San Andreas; normal pause/menu controls remain usable with the current patch.
+The San Andreas pause guard is integrated directly into the existing control groups. While the pause/menu screen is open, the game automatically receives completely stock controller input; there is no separate pause-menu cheat option.
 
 ---
 
@@ -385,9 +385,9 @@ No separate pause/menu cheat group is required in San Andreas; normal pause/menu
 
 | Game(s) | On-foot R1 | On-foot L1 | Vehicle Select override | Pause-menu handling |
 | --- | --- | --- | --- | --- |
-| GTA III / Vice City | Center camera | Next weapon | No | Native; no separate group |
+| GTA III / Vice City | Center camera | Next weapon | No | Automatic / built in |
 | Liberty City Stories / Vice City Stories | Center camera | Next weapon | No | Automatic / built in |
-| San Andreas | Next weapon | Previous weapon | **Hold Select for native D-pad only** | Native; no separate group |
+| San Andreas | Next weapon | Previous weapon | **Hold Select for native D-pad only** | Automatic / built in |
 
 ## Credits
 
