@@ -172,23 +172,14 @@ https://github.com/user-attachments/assets/b00580cb-8d17-4dae-8837-d51808d85970
 
 ## Cheat groups and pause-menu behavior
 
-### GTA III, Vice City, and San Andreas
+All five control patches use two selectable groups:
 
-These games use two selectable groups:
+- **Group 1 — Required:** enables the modern vehicle controls and required controller hooks.
+- **Group 2 — Optional:** enables the modern on-foot controls. Leave this disabled to keep the game's original on-foot layout.
 
-- **Group 1 — Required:** vehicle controls and the shared controller hook.
-- **Group 2 — Optional:** modern on-foot controls. Leave this disabled to keep the original on-foot layout.
+For the complete modern control layout, enable both groups.
 
-For the complete modern layout, enable both groups. The pause/menu guard is integrated into the patches and automatically restores stock controller input while the pause/menu screen is open, so there is no separate pause/menu cheat option.
-
-### Liberty City Stories and Vice City Stories
-
-These use two groups:
-
-- **Group 1 — Required:** vehicle controls.
-- **Group 2 — Optional:** modern on-foot controls.
-
-The native pause-menu guard is built into these patches. While the pause menu is open, the game automatically receives the original stock controller input; no separate pause-menu group is required.
+The **pause-menu guard is built directly into every patch**. While the pause/menu screen is open, the game automatically receives the original stock controller input. There is no separate pause-menu cheat or additional group to enable.
 
 ---
 
