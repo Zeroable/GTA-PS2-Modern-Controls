@@ -27,7 +27,6 @@ Several additional mods are actively being developed. Test builds that are far e
 ### Available now as WIP builds
 
 - **Grand Theft Auto III — First-person mod** — [download WIP build](WIP/5E115FB6_GTA3_First_Person_WIP.pnach)
-- **Grand Theft Auto III — HUD removal mod** — [download WIP build](WIP/5E115FB6_GTA3_No_Hud_WIP.pnach)
 - **Grand Theft Auto III — in-game map mod** — [download WIP build](WIP/5E115FB6_GTA_3_Map_Toggle_WIP.pnach)
 - **Grand Theft Auto: San Andreas — First-person mod** — [download WIP build](WIP/399A49CA_GTA_San_Andreas_First_Person_WIP.pnach)
 - **Grand Theft Auto: Vice City — Right-stick camera and first-person mod** — [download WIP build](WIP/20B19E49_GTA_Vice_City_Right_Stick_Camera_and_First_Person_WIP.pnach)
@@ -37,7 +36,11 @@ Several additional mods are actively being developed. Test builds that are far e
 - **Grand Theft Auto III — right-stick camera mod**
 - **Grand Theft Auto: Liberty City Stories — analog acceleration support**
 
-The WIP files are provided so they can be tested while development continues. They are separate from the finished Definitive Edition control patches in the repository root.
+The WIP files are provided so they can be tested while development continues. They are separate from the finished patches in the repository root.
+
+### Additional released patches
+
+- **Grand Theft Auto III — HUD + radar removal** — [download release](5E115FB6_GTA3_No_Hud.pnach)
 
 ## Emulator testing
 
@@ -68,6 +71,16 @@ These files are CRC-specific. A patch for one CRC should not be used with a diff
 
 No renaming or editing of the PNACH file is required.
 
+## Released additional patch documentation
+
+### GTA III HUD + radar removal
+
+File: [`5E115FB6_GTA3_No_Hud.pnach`](5E115FB6_GTA3_No_Hud.pnach)
+
+Enable **No HUD + Radar > Enable** to hide the GTA III HUD and minimap/radar.
+
+After turning the removal cheat off, use **Restore HUD + Radar** once if you want the HUD and radar back without restarting the game. Leave the restore option off during normal use.
+
 ## WIP patch documentation
 
 The following experimental patches are currently available in the [`WIP`](WIP) folder. They are usable test builds, but development is still ongoing. Each patch is CRC-specific, just like the finished control patches.
@@ -94,14 +107,6 @@ Current behavior:
 - The inversion option requires the main **First Person - Overhead Slot** group.
 
 To fully uninstall or disable the first-person patch, restart the game with the cheat disabled.
-
-### GTA III HUD removal mod
-
-File: [`WIP/5E115FB6_GTA3_No_Hud_WIP.pnach`](WIP/5E115FB6_GTA3_No_Hud_WIP.pnach)
-
-Enable **No HUD + Radar** to hide the GTA III HUD and minimap/radar.
-
-This is currently provided as a simple WIP HUD-removal patch.
 
 ### GTA III in-game map mod
 
