@@ -111,12 +111,13 @@ This patch adds an in-game GTA III map display using the game's original map ass
 
 Current usage and limitations:
 
-- Press **Start + Select** to toggle the map.
-- Release both buttons before trying to toggle it again.
+- Press **Start + Select** to open or close the map menu.
+- Release **Start + Select** before trying to toggle the map again.
+- While the map menu is open, press **Cross** to hide or show the **location icons**.
+- The current build now includes location icons; they can be toggled on and off without closing the map.
 - A **cold boot** is required.
 - The current build is designed around a **4:3 display**.
-- It uses the game's original textures.
-- **Map blips and markers are still in development.**
+- It uses the game's original map assets.
 
 ### GTA San Andreas First-person mod
 
