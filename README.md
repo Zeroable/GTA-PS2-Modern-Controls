@@ -147,12 +147,15 @@ This WIP combines the Vice City right-stick camera project and first-person proj
 
 Current controls and status:
 
-- **Select + R3** cycles between **Normal**, **Orbit**, and **First Person** camera modes.
+- To change camera mode, hold **Select** and press the game's **Look Backward** control.
+- With the **Zeroable modern-controls patch**, Look Backward is always **R3**, so camera modes are changed with **Select + R3** both on foot and in vehicles.
+- With the original stock controls, Look Backward is **R3 on foot** and **L1 + R1 in vehicles**.
 - **Select** by itself cycles the Orbit camera distance.
+- On foot, the available camera modes are **Normal**, **Orbit**, and **First Person**.
+- In vehicles, the available camera modes are **Normal** and **Orbit**.
 - Orbit camera operation has been tested on foot, in cars, on motorcycles, in helicopters, and in the Skimmer.
-- First Person currently applies **on foot only** and is still being actively tested.
-- The development build reserves **32 KiB** of memory and requires a full boot; use memory-card saves while testing it.
-- The patch includes compatibility with the Zeroable modern-control remapper through the shared input hook. Do **not** enable the original standalone remapper hooks alongside this WIP file.
+- First Person currently applies **on foot only**.
+- A full restart and memory-card load are required.
 
 #### Demonstration videos
 
