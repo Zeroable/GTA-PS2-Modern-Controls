@@ -27,7 +27,6 @@ Several additional mods are actively being developed. Test builds that are far e
 ### Available now as WIP builds
 
 - **Grand Theft Auto III — First-person mod** — [download WIP build](WIP/5E115FB6_GTA3_First_Person_WIP.pnach)
-- **Grand Theft Auto III — in-game map mod** — [download WIP build](WIP/5E115FB6_GTA_3_Map_Toggle_WIP.pnach)
 - **Grand Theft Auto: San Andreas — First-person mod** — [download WIP build](WIP/399A49CA_GTA_San_Andreas_First_Person_WIP.pnach)
 - **Grand Theft Auto: Vice City — Right-stick camera and first-person mod** — [download WIP build](WIP/20B19E49_GTA_Vice_City_Right_Stick_Camera_and_First_Person_WIP.pnach)
 
@@ -41,6 +40,7 @@ The WIP files are provided so they can be tested while development continues. Th
 ### Additional released patches
 
 - **Grand Theft Auto III — HUD + radar removal** — [download release](5E115FB6_GTA3_No_Hud.pnach)
+- **Grand Theft Auto III — Map Toggle 1.0** — [download release](5E115FB6_GTA_3_Map_Toggle.pnach)
 
 ## Emulator testing
 
@@ -71,6 +71,12 @@ These files are CRC-specific. A patch for one CRC should not be used with a diff
 
 No renaming or editing of the PNACH file is required.
 
+## GTA III mod demonstration
+
+This video demonstrates the current **GTA III first-person mod**, **HUD + radar removal**, and **Map Toggle** together:
+
+https://github.com/user-attachments/assets/835e43bf-2787-4288-8c80-a2e8606dff3d
+
 ## Released additional patch documentation
 
 ### GTA III HUD + radar removal
@@ -81,15 +87,24 @@ Enable **No HUD + Radar > Enable** to hide the GTA III HUD and minimap/radar.
 
 After turning the removal cheat off, use **Restore HUD + Radar** once if you want the HUD and radar back without restarting the game. Leave the restore option off during normal use.
 
+### GTA III Map Toggle 1.0
+
+File: [`5E115FB6_GTA_3_Map_Toggle.pnach`](5E115FB6_GTA_3_Map_Toggle.pnach)
+
+This patch adds an in-game GTA III map display using the game's original map assets.
+
+Usage and notes:
+
+- Press **D-pad Down** to open or close the map.
+- While the map is open, press **Cross** to hide or show the **location icons**.
+- The optional **Map on Pause Menu Background** group moves the pause-map background upward. It requires the main Map Toggle group; restart the game after changing this option.
+- A **cold boot** is required.
+- The release is designed around a **4:3 display**.
+- It uses the game's original radar/map tiles and HUD sprites; no ISO modification is required.
+
 ## WIP patch documentation
 
 The following experimental patches are currently available in the [`WIP`](WIP) folder. They are usable test builds, but development is still ongoing. Each patch is CRC-specific, just like the finished control patches.
-
-### GTA III WIP demonstration
-
-This video demonstrates the current **GTA III first-person mod**, **HUD removal mod**, and **in-game map mod** together:
-
-https://github.com/user-attachments/assets/307348f2-f506-46b0-9484-0fb834005f0f
 
 ### GTA III First-person mod
 
@@ -107,22 +122,6 @@ Current behavior:
 - The inversion option requires the main **First Person - Overhead Slot** group.
 
 To fully uninstall or disable the first-person patch, restart the game with the cheat disabled.
-
-### GTA III in-game map mod
-
-File: [`WIP/5E115FB6_GTA_3_Map_Toggle_WIP.pnach`](WIP/5E115FB6_GTA_3_Map_Toggle_WIP.pnach)
-
-This patch adds an in-game GTA III map display using the game's original map assets.
-
-Current usage and limitations:
-
-- Press **Start + Select** to open or close the map menu.
-- Release **Start + Select** before trying to toggle the map again.
-- While the map menu is open, press **Cross** to hide or show the **location icons**.
-- The current build now includes location icons; they can be toggled on and off without closing the map.
-- A **cold boot** is required.
-- The current build is designed around a **4:3 display**.
-- It uses the game's original map assets.
 
 ### GTA San Andreas First-person mod
 
