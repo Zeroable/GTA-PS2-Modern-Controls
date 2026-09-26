@@ -1,7 +1,7 @@
 gametitle=Grand Theft Auto: Vice City (NTSC-U Day 1 / CRC 20B19E49)
 comment=Definitive Edition-style controls for Grand Theft Auto: Vice City.
 comment=Built for the original PS2 default control scheme. Changing the in-game control type can produce different results.
-comment=TEST: Vehicle D-pad Up/Down remain native for shortcut use. D-pad Right still selects the next station/radio; D-pad Left remains suppressed.
+comment=TEST: In vehicles, D-pad Up keeps the modern side-mission/special-action mapping to native R3; D-pad Down passes through natively for shortcut use.
 comment=TEST: On foot, D-pad Down remains native for shortcut use; D-pad Left/Right still cycle weapons and D-pad Up remains suppressed.
 comment=Target: NTSC-U Day 1 SLUS-20552, CRC 20B19E49.
 comment=Public credit: Zeroable.
@@ -9,7 +9,7 @@ comment=The pause/menu native-controls guard is integrated into the existing gro
 comment=Control-remapping foundation based on PS2 Controller Remapper by pelvicthrustman.
 
 [GTA-PS2-Modern-Controls\Definitive Edition Controls\1 REQUIRED - Definitive Edition vehicle controls]
-description=TEST build. In vehicles: L2 brake, R2 accelerate, L1 fire, R1 or Cross handbrake, Square/Circle look left/right, and R3 looks behind. D-pad Up and Down pass through natively for shortcut use; D-pad Right selects the next radio station and D-pad Left remains suppressed. On-foot controls remain stock unless group 2 is enabled.
+description=TEST build. In vehicles: L2 brake, R2 accelerate, L1 fire, R1 or Cross handbrake, Square/Circle look left/right, and R3 looks behind. D-pad Up activates the vehicle sub-mission/special action through native R3, D-pad Down passes through natively for shortcut use, D-pad Right selects the next radio station, and D-pad Left remains suppressed. On-foot controls remain stock unless group 2 is enabled.
 author=Zeroable
 
 patch=1,EE,200FD050,extended,00C0C821
@@ -17,7 +17,7 @@ patch=1,EE,200FD054,extended,08048871
 patch=1,EE,200FD058,extended,24030070
 
 patch=1,EE,200FD05C,extended,87240002
-patch=1,EE,200FD060,extended,3485EFA4
+patch=1,EE,200FD060,extended,3485EFB4
 patch=1,EE,200FD064,extended,93260012
 patch=1,EE,200FD068,extended,93270013
 patch=1,EE,200FD06C,extended,93280010
@@ -30,7 +30,7 @@ patch=1,EE,200FD084,extended,932E0008
 patch=1,EE,200FD088,extended,240F00FF
 patch=1,EE,200FD08C,extended,A3200008
 patch=1,EE,200FD090,extended,A3200009
-patch=1,EE,200FD094,extended,00000000
+patch=1,EE,200FD094,extended,A320000A
 patch=1,EE,200FD098,extended,00000000
 patch=1,EE,200FD09C,extended,A3200010
 patch=1,EE,200FD0A0,extended,A3200011
@@ -83,7 +83,7 @@ patch=1,EE,200FD158,extended,A32F0013
 patch=1,EE,200FD15C,extended,30810010
 patch=1,EE,200FD160,extended,14200002
 patch=1,EE,200FD164,extended,00000000
-patch=1,EE,200FD168,extended,00000000
+patch=1,EE,200FD168,extended,30A5FFFB
 patch=1,EE,200FD16C,extended,30810020
 patch=1,EE,200FD170,extended,14200003
 patch=1,EE,200FD174,extended,00000000
