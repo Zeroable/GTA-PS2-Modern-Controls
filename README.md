@@ -28,7 +28,6 @@ Several additional mods are actively being developed. Test builds that are far e
 
 - **Grand Theft Auto III — First-person mod** — [download WIP build](WIP/5E115FB6_GTA3_First_Person_WIP.pnach)
 - **Grand Theft Auto: San Andreas — First-person mod** — [download WIP build](WIP/399A49CA_GTA_San_Andreas_First_Person_WIP.pnach)
-- **Grand Theft Auto: Vice City — Right-stick camera and first-person mod** — [download WIP build](WIP/20B19E49_GTA_Vice_City_Right_Stick_Camera_and_First_Person_WIP.pnach)
 
 ### Still in development
 
@@ -41,6 +40,7 @@ The WIP files are provided so they can be tested while development continues. Th
 
 - **Grand Theft Auto III — HUD + radar removal** — [download release](5E115FB6_GTA3_No_Hud.pnach)
 - **Grand Theft Auto III — Map Toggle 1.0** — [download release](5E115FB6_GTA_3_Map_Toggle.pnach)
+- **Grand Theft Auto: Vice City — FP and Camera Mod 1.0** — [download release](20B19E49_GTA_Vice_City_FP_and_Camera_Mod.pnach)
 
 ## Emulator testing
 
@@ -102,6 +102,31 @@ Usage and notes:
 - The release is designed around a **4:3 display**.
 - It uses the game's original radar/map tiles and HUD sprites; no ISO modification is required.
 
+### GTA Vice City FP and Camera Mod 1.0
+
+File: [`20B19E49_GTA_Vice_City_FP_and_Camera_Mod.pnach`](20B19E49_GTA_Vice_City_FP_and_Camera_Mod.pnach)
+
+Target: **NTSC-U Day 1 SLUS-20552 / CRC `20B19E49`**
+
+This patch combines the Vice City right-stick Orbit camera and on-foot first-person camera into one mod.
+
+Controls and notes:
+
+- Press **D-pad Down** to toggle the camera mod on or off. This works with either stock controls or the Zeroable modern-controls patch.
+- While the mod is enabled, press **Select** to cycle through three Orbit distances and **First Person** while on foot.
+- In vehicles, **Select** cycles the Orbit distances only; First Person is on-foot only.
+- On foot, release **R3** to center the camera behind Tommy.
+- Holding the game's native **L1** camera-center action also centers the view; with the Zeroable modern on-foot controls, that action is on **R1**.
+- Stock controls are supported. The Zeroable modern-controls patch is optional and no controller remapping is bundled into this mod.
+- Do not enable this release alongside the older integrated Vice City camera development patch.
+- A full restart and memory-card load are required.
+
+#### Demonstration video
+
+This video demonstrates the **Vice City FP and Camera Mod**:
+
+https://github.com/user-attachments/assets/647da0ea-b225-4436-82e1-7636dfb32a2c
+
 ## WIP patch documentation
 
 The following experimental patches are currently available in the [`WIP`](WIP) folder. They are usable test builds, but development is still ongoing. Each patch is CRC-specific, just like the finished control patches.
@@ -140,32 +165,6 @@ Current behavior and options:
 - Hide Body removes CJ's body from the closest on-foot first-person view while leaving weapons on their normal draw path.
 - Switching camera restores the body.
 - To fully undo the instruction patch or uninstall the Hide Body hooks, restart the game with the relevant cheat disabled.
-
-### GTA Vice City Right-stick Camera and First-person mod
-
-File: [`WIP/20B19E49_GTA_Vice_City_Right_Stick_Camera_and_First_Person_WIP.pnach`](WIP/20B19E49_GTA_Vice_City_Right_Stick_Camera_and_First_Person_WIP.pnach)
-
-Target: **NTSC-U Day 1 SLUS-20552 / CRC `20B19E49`**
-
-This WIP combines the Vice City right-stick camera project and first-person project into one patch.
-
-Current controls and status:
-
-- To change camera mode, hold **Select** and press the game's **Look Backward** control.
-- With the **Zeroable modern-controls patch**, Look Backward is always **R3**, so camera modes are changed with **Select + R3** both on foot and in vehicles.
-- With the original stock controls, Look Backward is **R3 on foot** and **L1 + R1 in vehicles**.
-- **Select** by itself cycles the Orbit camera distance.
-- On foot, the available camera modes are **Normal**, **Orbit**, and **First Person**.
-- In vehicles, the available camera modes are **Normal** and **Orbit**.
-- Orbit camera operation has been tested on foot, in cars, on motorcycles, in helicopters, and in the Skimmer.
-- First Person currently applies **on foot only**.
-- A full restart and memory-card load are required.
-
-#### Demonstration video
-
-This video demonstrates the current **Vice City right-stick camera** and **first-person** work:
-
-https://github.com/user-attachments/assets/647da0ea-b225-4436-82e1-7636dfb32a2c
 
 ## Cheat groups and pause-menu behavior
 
