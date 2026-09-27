@@ -156,6 +156,12 @@ Current controls and notes:
 - Requires a **cold boot and memory-card load**.
 - Do **not** enable the older standalone GTA III First Person WIP at the same time.
 
+#### Demonstration video
+
+This video demonstrates the current **GTA III First Person and Right Stick Camera** WIP:
+
+https://github.com/user-attachments/assets/60f1e004-d828-4671-b8e2-57960329ffde
+
 
 
 The following experimental patches are currently available in the [`WIP`](WIP) folder. They are usable test builds, but development is still ongoing. Each patch is CRC-specific, just like the finished control patches.
