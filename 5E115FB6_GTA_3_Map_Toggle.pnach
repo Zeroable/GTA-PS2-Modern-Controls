@@ -5,6 +5,7 @@ gametitle=Grand Theft Auto III (USA) - SLUS-20062 / 5E115FB6
 
 [GTA-PS2-Modern-Controls\Map Toggle\Enable - Press D-Pad Down/Cross to Toggle Icons]
 description=D-pad Down opens/closes the map. Cross hides/shows location icons.
+author=Zeroable
 // Reserve 16 KiB before game heap allocation and initialize runtime state.
 patch=0,EE,00100074,word,24843480
 patch=0,EE,001002B4,word,24433480
@@ -1956,6 +1957,7 @@ patch=1,EE,00296CB4,word,00000000
 
 [GTA-PS2-Modern-Controls\Map Toggle\Optional - Map on Pause Menu Background]
 description=Requires Map Toggle Enable. Moves the pause map upward. Restart after changing.
+author=Zeroable
 // Guard both halves of the main draw hook; optional section alone is inert.
 patch=1,EE,E0020C1A,extended,0027C6B6
 patch=1,EE,E001BDC0,extended,0027C6B4
