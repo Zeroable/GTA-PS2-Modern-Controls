@@ -22,25 +22,24 @@ Modern controllers normally place analog acceleration and braking on R2 and L2. 
 
 ## Coming soon / work in progress
 
-Several additional mods are actively being developed. Test builds that are far enough along to use are available in the [`WIP`](WIP) folder, but they should still be considered unfinished and may change.
+Additional mods still being developed are kept in the [`WIP`](WIP) folder. These builds are unfinished and may change as development continues.
 
 ### Available now as WIP builds
 
-- **Grand Theft Auto III — First Person and Right Stick Camera** — [download WIP build](WIP/5E115FB6_GTA_III_First_Person_and_Right_Stick_Camera_WIP.pnach)
-- **Grand Theft Auto III — standalone First-person mod (older test build)** — [download WIP build](WIP/5E115FB6_GTA3_First_Person_WIP.pnach)
 - **Grand Theft Auto: San Andreas — First-person mod** — [download WIP build](WIP/399A49CA_GTA_San_Andreas_First_Person_WIP.pnach)
 
 ### Still in development
 
 - **Grand Theft Auto: Liberty City Stories — analog acceleration support**
 
-The WIP files are provided so they can be tested while development continues. They are separate from the finished patches in the repository root.
+The WIP folder is kept separate from the finished releases in the repository root.
 
 ### Additional released patches
 
 - **Grand Theft Auto III — HUD + radar removal** — [download release](5E115FB6_GTA3_No_Hud.pnach)
 - **Grand Theft Auto III — Map Toggle 1.0** — [download release](5E115FB6_GTA_3_Map_Toggle.pnach)
-- **Grand Theft Auto: Vice City — First Person and Right Stick Camera 1.1** — [download release](20B19E49_GTA_Vice_City_First_Person_and_Right_Stick_Camera.pnach)
+- **Grand Theft Auto III — Right Stick Camera and First Person 1.0** — [download release](5E115FB6_GTA_3_Right_Stick_Camera_and_First_Person.pnach)
+- **Grand Theft Auto: Vice City — Right Stick Camera and First Person 1.02** — [download release](20B19E49_GTA_Vice_City_Right_Stick_Camera_and_First_Person.pnach)
 
 ## Emulator testing
 
@@ -71,12 +70,6 @@ These files are CRC-specific. A patch for one CRC should not be used with a diff
 
 No renaming or editing of the PNACH file is required.
 
-## GTA III mod demonstration
-
-This video demonstrates the current **GTA III first-person mod**, **HUD + radar removal**, and **Map Toggle** together:
-
-https://github.com/user-attachments/assets/835e43bf-2787-4288-8c80-a2e8606dff3d
-
 ## Released additional patch documentation
 
 ### GTA III HUD + radar removal
@@ -102,9 +95,34 @@ Usage and notes:
 - The release is designed around a **4:3 display**.
 - It uses the game's original radar/map tiles and HUD sprites; no ISO modification is required.
 
-### GTA Vice City First Person and Right Stick Camera 1.1
+### GTA III Right Stick Camera and First Person 1.0
 
-File: [`20B19E49_GTA_Vice_City_First_Person_and_Right_Stick_Camera.pnach`](20B19E49_GTA_Vice_City_First_Person_and_Right_Stick_Camera.pnach)
+File: [`5E115FB6_GTA_3_Right_Stick_Camera_and_First_Person.pnach`](5E115FB6_GTA_3_Right_Stick_Camera_and_First_Person.pnach)
+
+Target: **NTSC-U SLUS-20062 / CRC `5E115FB6`**
+
+This patch adds a **right-stick Orbit camera** and an **on-foot first-person camera** to GTA III.
+
+Controls and notes:
+
+- Press **Select + D-pad Down** to toggle the alternate-camera set on or off.
+- While enabled and on foot, press **Select** to cycle **Orbit Far → Orbit Medium → Orbit Near → First Person**.
+- In vehicles, **Select** cycles the three Orbit distances only; First Person remains on-foot only.
+- **R3** temporarily looks behind.
+- Hold the game's native **L1 camera-center action** to smoothly center the view; with the Zeroable modern on-foot controls, that action is on **R1**.
+- Includes an optional **Inversion OFF** group. GTA III's default vertical look is inverted; enable this option for non-inverted vertical look in the alternate cameras, native first-person view, sniper aiming, and bazooka aiming.
+- Supports stock controls, the Zeroable modern-controls patch, and the released GTA III Map Toggle.
+- A **cold boot and memory-card load** are required.
+
+#### Demonstration video
+
+This video demonstrates the **GTA III Right Stick Camera and First Person** mod:
+
+https://github.com/user-attachments/assets/60f1e004-d828-4671-b8e2-57960329ffde
+
+### GTA Vice City Right Stick Camera and First Person 1.02
+
+File: [`20B19E49_GTA_Vice_City_Right_Stick_Camera_and_First_Person.pnach`](20B19E49_GTA_Vice_City_Right_Stick_Camera_and_First_Person.pnach)
 
 Target: **NTSC-U Day 1 SLUS-20552 / CRC `20B19E49`**
 
@@ -115,73 +133,20 @@ Controls and notes:
 - Press **D-pad Down** to toggle the camera mod on or off. This works with either stock controls or the Zeroable modern-controls patch.
 - While enabled and on foot, press **Select** to cycle **Orbit Far → Orbit Medium → Orbit Near → First Person**.
 - In vehicles, **Select** cycles the three Orbit distances only; First Person remains on-foot only.
-- **R3 temporarily looks backward**.
-- Hold the game's native **L1 camera-center action** to **smoothly center the view**; with the Zeroable modern on-foot controls, that action is on **R1**.
+- **R3** temporarily looks backward.
+- Hold the game's native **L1 camera-center action** to smoothly center the view; with the Zeroable modern on-foot controls, that action is on **R1**.
 - Stock controls are supported. The Zeroable modern-controls patch is optional and no controller remapping is bundled into this mod.
-- Do not enable this release alongside the older integrated Vice City camera development patch.
-- A full restart and memory-card load are required.
-
-#### Version 1.1
-
-- Updated right-stick camera behavior and centering logic.
-- R3 now temporarily looks backward.
-- Holding the camera-center action smoothly centers the view.
-- The release filename and documentation now explicitly identify this as a **Right Stick Camera** mod.
+- A **full restart and memory-card load** are required.
 
 #### Demonstration video
 
-This video demonstrates the **Vice City First Person and Right Stick Camera** mod:
+This video demonstrates the **Vice City Right Stick Camera and First Person** mod:
 
 https://github.com/user-attachments/assets/647da0ea-b225-4436-82e1-7636dfb32a2c
 
 ## WIP patch documentation
 
-### GTA III First Person and Right Stick Camera
-
-File: [`WIP/5E115FB6_GTA_III_First_Person_and_Right_Stick_Camera_WIP.pnach`](WIP/5E115FB6_GTA_III_First_Person_and_Right_Stick_Camera_WIP.pnach)
-
-Target: **NTSC-U SLUS-20062 / CRC `5E115FB6`**
-
-This WIP combines the GTA III right-stick camera project and first-person camera into one patch.
-
-Current controls and notes:
-
-- Press **Select + D-pad Down** to toggle the alternate-camera set on or off.
-- While enabled and on foot, press **Select** to cycle **Far**, **Medium**, **Near**, and **First Person**.
-- In vehicles, **Select** cycles the three Orbit distances; First Person is on-foot only.
-- **R3** temporarily looks behind.
-- Hold the game's native **L1** camera-center action to smoothly center the view; with the Zeroable modern on-foot controls, that action is on **R1**.
-- Includes an optional **Universal Invert Vertical** group for player-one right-stick vertical input.
-- Supports stock controls, the Zeroable modern-controls patch, and the released GTA III Map Toggle.
-- Requires a **cold boot and memory-card load**.
-- Do **not** enable the older standalone GTA III First Person WIP at the same time.
-
-#### Demonstration video
-
-This video demonstrates the current **GTA III First Person and Right Stick Camera** WIP:
-
-https://github.com/user-attachments/assets/60f1e004-d828-4671-b8e2-57960329ffde
-
-
-
-The following experimental patches are currently available in the [`WIP`](WIP) folder. They are usable test builds, but development is still ongoing. Each patch is CRC-specific, just like the finished control patches.
-
-### GTA III First-person mod
-
-File: [`WIP/5E115FB6_GTA3_First_Person_WIP.pnach`](WIP/5E115FB6_GTA3_First_Person_WIP.pnach)
-
-The first-person view uses the game's overhead camera slot. Cycle past the three normal third-person camera distances to reach it.
-
-Current behavior:
-
-- Keeps the native first-person eye position.
-- Supports right-stick look.
-- Supports camera-relative directional movement while in first person.
-- R3 look-behind behavior is handled by the patch.
-- Includes an optional **First Person - Invert Vertical Look** group.
-- The inversion option requires the main **First Person - Overhead Slot** group.
-
-To fully uninstall or disable the first-person patch, restart the game with the cheat disabled.
+The remaining WIP patch is unfinished and may change as development continues.
 
 ### GTA San Andreas First-person mod
 
