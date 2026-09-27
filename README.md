@@ -40,7 +40,7 @@ The WIP files are provided so they can be tested while development continues. Th
 
 - **Grand Theft Auto III — HUD + radar removal** — [download release](5E115FB6_GTA3_No_Hud.pnach)
 - **Grand Theft Auto III — Map Toggle 1.0** — [download release](5E115FB6_GTA_3_Map_Toggle.pnach)
-- **Grand Theft Auto: Vice City — FP and Camera Mod 1.0** — [download release](20B19E49_GTA_Vice_City_FP_and_Camera_Mod.pnach)
+- **Grand Theft Auto: Vice City — First Person and Right Stick Camera 1.1** — [download release](20B19E49_GTA_Vice_City_First_Person_and_Right_Stick_Camera.pnach)
 
 ## Emulator testing
 
@@ -102,28 +102,35 @@ Usage and notes:
 - The release is designed around a **4:3 display**.
 - It uses the game's original radar/map tiles and HUD sprites; no ISO modification is required.
 
-### GTA Vice City FP and Camera Mod 1.0
+### GTA Vice City First Person and Right Stick Camera 1.1
 
-File: [`20B19E49_GTA_Vice_City_FP_and_Camera_Mod.pnach`](20B19E49_GTA_Vice_City_FP_and_Camera_Mod.pnach)
+File: [`20B19E49_GTA_Vice_City_First_Person_and_Right_Stick_Camera.pnach`](20B19E49_GTA_Vice_City_First_Person_and_Right_Stick_Camera.pnach)
 
 Target: **NTSC-U Day 1 SLUS-20552 / CRC `20B19E49`**
 
-This patch combines the Vice City right-stick Orbit camera and on-foot first-person camera into one mod.
+This patch adds a **right-stick Orbit camera** and an **on-foot first-person camera** to Vice City.
 
 Controls and notes:
 
 - Press **D-pad Down** to toggle the camera mod on or off. This works with either stock controls or the Zeroable modern-controls patch.
-- While the mod is enabled, press **Select** to cycle through three Orbit distances and **First Person** while on foot.
-- In vehicles, **Select** cycles the Orbit distances only; First Person is on-foot only.
-- On foot, release **R3** to center the camera behind Tommy.
-- Holding the game's native **L1** camera-center action also centers the view; with the Zeroable modern on-foot controls, that action is on **R1**.
+- While enabled and on foot, press **Select** to cycle **Orbit Far → Orbit Medium → Orbit Near → First Person**.
+- In vehicles, **Select** cycles the three Orbit distances only; First Person remains on-foot only.
+- **R3 temporarily looks backward**.
+- Hold the game's native **L1 camera-center action** to **smoothly center the view**; with the Zeroable modern on-foot controls, that action is on **R1**.
 - Stock controls are supported. The Zeroable modern-controls patch is optional and no controller remapping is bundled into this mod.
 - Do not enable this release alongside the older integrated Vice City camera development patch.
 - A full restart and memory-card load are required.
 
+#### Version 1.1
+
+- Updated right-stick camera behavior and centering logic.
+- R3 now temporarily looks backward.
+- Holding the camera-center action smoothly centers the view.
+- The release filename and documentation now explicitly identify this as a **Right Stick Camera** mod.
+
 #### Demonstration video
 
-This video demonstrates the **Vice City FP and Camera Mod**:
+This video demonstrates the **Vice City First Person and Right Stick Camera** mod:
 
 https://github.com/user-attachments/assets/647da0ea-b225-4436-82e1-7636dfb32a2c
 
