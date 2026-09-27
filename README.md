@@ -26,12 +26,12 @@ Several additional mods are actively being developed. Test builds that are far e
 
 ### Available now as WIP builds
 
-- **Grand Theft Auto III — First-person mod** — [download WIP build](WIP/5E115FB6_GTA3_First_Person_WIP.pnach)
+- **Grand Theft Auto III — First Person and Right Stick Camera** — [download WIP build](WIP/5E115FB6_GTA_III_First_Person_and_Right_Stick_Camera_WIP.pnach)
+- **Grand Theft Auto III — standalone First-person mod (older test build)** — [download WIP build](WIP/5E115FB6_GTA3_First_Person_WIP.pnach)
 - **Grand Theft Auto: San Andreas — First-person mod** — [download WIP build](WIP/399A49CA_GTA_San_Andreas_First_Person_WIP.pnach)
 
 ### Still in development
 
-- **Grand Theft Auto III — right-stick camera mod**
 - **Grand Theft Auto: Liberty City Stories — analog acceleration support**
 
 The WIP files are provided so they can be tested while development continues. They are separate from the finished patches in the repository root.
@@ -135,6 +135,28 @@ This video demonstrates the **Vice City First Person and Right Stick Camera** mo
 https://github.com/user-attachments/assets/647da0ea-b225-4436-82e1-7636dfb32a2c
 
 ## WIP patch documentation
+
+### GTA III First Person and Right Stick Camera
+
+File: [`WIP/5E115FB6_GTA_III_First_Person_and_Right_Stick_Camera_WIP.pnach`](WIP/5E115FB6_GTA_III_First_Person_and_Right_Stick_Camera_WIP.pnach)
+
+Target: **NTSC-U SLUS-20062 / CRC `5E115FB6`**
+
+This WIP combines the GTA III right-stick camera project and first-person camera into one patch.
+
+Current controls and notes:
+
+- Press **Select + D-pad Down** to toggle the alternate-camera set on or off.
+- While enabled and on foot, press **Select** to cycle **Far**, **Medium**, **Near**, and **First Person**.
+- In vehicles, **Select** cycles the three Orbit distances; First Person is on-foot only.
+- **R3** temporarily looks behind.
+- Hold the game's native **L1** camera-center action to smoothly center the view; with the Zeroable modern on-foot controls, that action is on **R1**.
+- Includes an optional **Universal Invert Vertical** group for player-one right-stick vertical input.
+- Supports stock controls, the Zeroable modern-controls patch, and the released GTA III Map Toggle.
+- Requires a **cold boot and memory-card load**.
+- Do **not** enable the older standalone GTA III First Person WIP at the same time.
+
+
 
 The following experimental patches are currently available in the [`WIP`](WIP) folder. They are usable test builds, but development is still ongoing. Each patch is CRC-specific, just like the finished control patches.
 
