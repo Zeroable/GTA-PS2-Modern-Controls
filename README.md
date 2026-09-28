@@ -18,7 +18,7 @@ The original PS2 games were designed around the DualShock 2 controller, which ha
 
 Modern controllers normally place analog acceleration and braking on R2 and L2. These patches move the games' native pressure-sensitive acceleration and braking actions to those triggers. When the controller and emulator provide analog trigger values, a light press can produce gentle input and a full press can produce full acceleration or braking. A controller configured for digital-only trigger input will still behave like an on/off button.
 
-*Vice City Stories* also supports analog acceleration and braking on PS2, so its R2/L2 trigger mappings preserve that analog behavior. *Liberty City Stories* currently uses digital acceleration and braking in this patch; analog acceleration support for LCS is in progress.
+*Vice City Stories* also supports analog acceleration and braking on PS2, so its R2/L2 trigger mappings preserve that analog behavior. *Liberty City Stories* currently uses digital acceleration and braking in the released patch. A separate **analog acceleration/braking WIP build** is available for testing in the [`WIP`](WIP) folder.
 
 ## Coming soon / work in progress
 
@@ -26,11 +26,8 @@ Additional mods still being developed are kept in the [`WIP`](WIP) folder. These
 
 ### Available now as WIP builds
 
+- **Grand Theft Auto: Liberty City Stories — Analog acceleration/braking controls** — [download WIP build](WIP/7EA439F5_GTA_Liberty_City_Stories_Definitive_Edition_Controls_Analog_Acceleration_Braking_WIP.pnach)
 - **Grand Theft Auto: San Andreas — First-person mod** — [download WIP build](WIP/399A49CA_GTA_San_Andreas_First_Person_WIP.pnach)
-
-### Still in development
-
-- **Grand Theft Auto: Liberty City Stories — analog acceleration support**
 
 The WIP folder is kept separate from the finished releases in the repository root.
 
@@ -145,6 +142,25 @@ This video demonstrates the **Vice City Right Stick Camera and First Person** mo
 https://github.com/user-attachments/assets/647da0ea-b225-4436-82e1-7636dfb32a2c
 
 ## WIP patch documentation
+
+### GTA Liberty City Stories Analog Acceleration/Braking
+
+File: [`WIP/7EA439F5_GTA_Liberty_City_Stories_Definitive_Edition_Controls_Analog_Acceleration_Braking_WIP.pnach`](WIP/7EA439F5_GTA_Liberty_City_Stories_Definitive_Edition_Controls_Analog_Acceleration_Braking_WIP.pnach)
+
+Target: **NTSC-U SLUS-21423 / CRC `7EA439F5`**
+
+This WIP keeps the current Liberty City Stories modern-control layout while adding full-range analog vehicle acceleration and braking.
+
+Current behavior and notes:
+
+- **R2** provides analog acceleration and **L2** provides analog braking/reverse.
+- The analog pedal hooks bypass the game's normal 4× Cross/Square pressure gain and minimum-throttle behavior while driving.
+- Stock controller processing is retained **on foot**, **while paused**, and for the **second controller**.
+- Requires analog trigger bindings in PCSX2 to get proportional input.
+- The existing released Liberty City Stories control patch remains unchanged and continues to use digital acceleration/braking.
+- This build is being kept in WIP while it receives additional testing.
+
+
 
 The remaining WIP patch is unfinished and may change as development continues.
 
