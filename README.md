@@ -27,6 +27,7 @@ Additional mods still being developed are kept in the [`WIP`](WIP) folder. These
 ### Available now as WIP builds
 
 - **Grand Theft Auto: Liberty City Stories — Analog acceleration/braking controls** — [download WIP build](WIP/7EA439F5_GTA_Liberty_City_Stories_Definitive_Edition_Controls_Analog_Acceleration_Braking_WIP.pnach)
+- **Grand Theft Auto: Vice City Stories — Free Camera** — [download WIP build](WIP/4F32A11F_GTA_Vice_City_Stories_Free_Camera_WIP.pnach)
 - **Grand Theft Auto: San Andreas — First-person mod** — [download WIP build](WIP/399A49CA_GTA_San_Andreas_First_Person_WIP.pnach)
 
 The WIP folder is kept separate from the finished releases in the repository root.
@@ -162,7 +163,21 @@ Current behavior and notes:
 
 
 
-The remaining WIP patch is unfinished and may change as development continues.
+### GTA Vice City Stories Free Camera
+
+File: [`WIP/4F32A11F_GTA_Vice_City_Stories_Free_Camera_WIP.pnach`](WIP/4F32A11F_GTA_Vice_City_Stories_Free_Camera_WIP.pnach)
+
+Target: **NTSC-U SLUS-21590 / CRC `4F32A11F`**
+
+This WIP adds a selectable Free Camera setup to Vice City Stories.
+
+Current controls and notes:
+
+- Press **D-pad Down** to toggle the Free Camera.
+- Press **Select** to cycle **First Person → Far → Medium → Near**.
+- The optional **Invert Vertical Look** group enables inverted vertical look; the default is non-inverted.
+- A **cold boot** is required. Cold boot again after changing the inversion option.
+- Public credit: **Zeroable**.
 
 ### GTA San Andreas First-person mod
 
