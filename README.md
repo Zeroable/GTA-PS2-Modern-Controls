@@ -18,7 +18,7 @@ The original PS2 games were designed around the DualShock 2 controller, which ha
 
 Modern controllers normally place analog acceleration and braking on R2 and L2. These patches move the games' native pressure-sensitive acceleration and braking actions to those triggers. When the controller and emulator provide analog trigger values, a light press can produce gentle input and a full press can produce full acceleration or braking. A controller configured for digital-only trigger input will still behave like an on/off button.
 
-*Vice City Stories* also supports analog acceleration and braking on PS2, so its R2/L2 trigger mappings preserve that analog behavior. *Liberty City Stories* currently uses digital acceleration and braking in the released patch. A separate **analog acceleration/braking WIP build** is available for testing in the [`WIP`](WIP) folder.
+*Vice City Stories* also supports analog acceleration and braking on PS2, so its R2/L2 trigger mappings preserve that analog behavior. *Liberty City Stories* now includes optional full-range analog acceleration and braking in the released patch. Its Group 1 provides the complete modern control layout; enable Group 2 only when you want proportional R2/L2 pedals and have those triggers bound to analog axes in PCSX2.
 
 ## Coming soon / work in progress
 
@@ -26,7 +26,6 @@ Additional mods still being developed are kept in the [`WIP`](WIP) folder. These
 
 ### Available now as WIP builds
 
-- **Grand Theft Auto: Liberty City Stories — Analog acceleration/braking controls** — [download WIP build](WIP/7EA439F5_GTA_Liberty_City_Stories_Definitive_Edition_Controls_Analog_Acceleration_Braking_WIP.pnach)
 - **Grand Theft Auto: Vice City Stories — Free Camera** — [download WIP build](WIP/4F32A11F_GTA_Vice_City_Stories_Free_Camera_WIP.pnach)
 - **Grand Theft Auto: San Andreas — First-person mod** — [download WIP build](WIP/399A49CA_GTA_San_Andreas_First_Person_WIP.pnach)
 
@@ -53,7 +52,7 @@ These layouts have been tested on:
 | Grand Theft Auto III | NTSC-U, SLUS-20062 | `5E115FB6` | [`5E115FB6_GTA_3_Definitive_Edition_Controls.pnach`](5E115FB6_GTA_3_Definitive_Edition_Controls.pnach) |
 | Grand Theft Auto: Vice City | NTSC-U Day 1, SLUS-20552 | `20B19E49` | [`20B19E49_GTA_Vice_City_Definitive_Edition_Controls.pnach`](20B19E49_GTA_Vice_City_Definitive_Edition_Controls.pnach) |
 | Grand Theft Auto: San Andreas | NTSC-U, SLUS-20946 | `399A49CA` | [`399A49CA_GTA_San_Andreas_Definitive_Edition_Controls.pnach`](399A49CA_GTA_San_Andreas_Definitive_Edition_Controls.pnach) |
-| Grand Theft Auto: Liberty City Stories | NTSC-U, SLUS-21423 | `7EA439F5` | [`7EA439F5_GTA_Liberty_City_Stories_Definitive_Edition_Controls.pnach`](7EA439F5_GTA_Liberty_City_Stories_Definitive_Edition_Controls.pnach) |
+| Grand Theft Auto: Liberty City Stories | NTSC-U, SLUS-21423 | `7EA439F5` | [`7EA439F5_GTA_Liberty_City_Stories_Definitive_Edition_Controls_Analog_Acceleration_and_Braking.pnach`](7EA439F5_GTA_Liberty_City_Stories_Definitive_Edition_Controls_Analog_Acceleration_and_Braking.pnach) |
 | Grand Theft Auto: Vice City Stories | NTSC-U, SLUS-21590 | `4F32A11F` | [`4F32A11F_GTA_Vice_City_Stories_Definitive_Edition_Controls.pnach`](4F32A11F_GTA_Vice_City_Stories_Definitive_Edition_Controls.pnach) |
 
 These files are CRC-specific. A patch for one CRC should not be used with a different game revision.
@@ -144,25 +143,6 @@ https://github.com/user-attachments/assets/647da0ea-b225-4436-82e1-7636dfb32a2c
 
 ## WIP patch documentation
 
-### GTA Liberty City Stories Analog Acceleration/Braking
-
-File: [`WIP/7EA439F5_GTA_Liberty_City_Stories_Definitive_Edition_Controls_Analog_Acceleration_Braking_WIP.pnach`](WIP/7EA439F5_GTA_Liberty_City_Stories_Definitive_Edition_Controls_Analog_Acceleration_Braking_WIP.pnach)
-
-Target: **NTSC-U SLUS-21423 / CRC `7EA439F5`**
-
-This WIP keeps the current Liberty City Stories modern-control layout while adding full-range analog vehicle acceleration and braking.
-
-Current behavior and notes:
-
-- **R2** provides analog acceleration and **L2** provides analog braking/reverse.
-- The analog pedal hooks bypass the game's normal 4× Cross/Square pressure gain and minimum-throttle behavior while driving.
-- Stock controller processing is retained **on foot**, **while paused**, and for the **second controller**.
-- Requires analog trigger bindings in PCSX2 to get proportional input.
-- The existing released Liberty City Stories control patch remains unchanged and continues to use digital acceleration/braking.
-- This build is being kept in WIP while it receives additional testing.
-
-
-
 ### GTA Vice City Stories Free Camera
 
 File: [`WIP/4F32A11F_GTA_Vice_City_Stories_Free_Camera_WIP.pnach`](WIP/4F32A11F_GTA_Vice_City_Stories_Free_Camera_WIP.pnach)
@@ -199,12 +179,12 @@ Current behavior and options:
 
 ## Cheat groups and pause-menu behavior
 
-All five control patches use two selectable groups:
+All five control patches use two selectable groups, but **Liberty City Stories now uses a different Group 2 purpose**:
 
-- **Group 1 — Required:** enables the modern vehicle controls and required controller hooks.
-- **Group 2 — Optional:** enables the modern on-foot controls. Leave this disabled to keep the game's original on-foot layout.
+- **GTA III, Vice City, San Andreas, and Vice City Stories:** Group 1 enables the required modern vehicle controls and controller hooks; Group 2 enables the optional modern on-foot layout. Enable both groups for the complete modern control scheme.
+- **Liberty City Stories:** Group 1 enables the complete modern vehicle **and** on-foot control layout. Group 2 is optional and enables full-range analog **R2 acceleration** and **L2 braking/reverse**. Leave Group 2 disabled for the standard pedal behavior.
 
-For the complete modern control layout, enable both groups.
+For the Liberty City Stories analog option, bind L2/R2 to analog trigger axes in PCSX2 and fully restart the game after enabling or disabling Group 2.
 
 The **pause-menu guard is built directly into every patch**. While the pause/menu screen is open, the game automatically receives the original stock controller input. There is no separate pause-menu cheat or additional group to enable.
 
@@ -278,7 +258,7 @@ For **Liberty City Stories** and **Vice City Stories**, the pause guard is built
 
 GTA III, Vice City, and Vice City Stories retain the original PS2 analog / pressure-sensitive acceleration and braking behavior when those actions are moved to R2/L2.
 
-Liberty City Stories currently uses digital acceleration and braking in this patch. Analog acceleration support for LCS is in progress.
+Liberty City Stories now includes analog acceleration and braking as an optional **Group 2** in the released control patch. Group 1 remains the complete modern control layout by itself. Enable Group 2 for full-range proportional **R2 acceleration** and **L2 braking/reverse**, with L2/R2 bound to analog trigger axes in PCSX2; fully restart the game after changing this option.
 
 ---
 

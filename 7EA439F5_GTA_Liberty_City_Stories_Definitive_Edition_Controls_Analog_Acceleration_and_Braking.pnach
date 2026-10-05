@@ -1,24 +1,21 @@
 gametitle=Grand Theft Auto: Liberty City Stories (NTSC-U / CRC 7EA439F5)
-comment=Work in progress. Analog acceleration/braking build pending additional testing.
-comment=Definitive Edition-style controls for Grand Theft Auto: Liberty City Stories.
-comment=The pause menu always receives native stock controller input.
+comment=Definitive Edition-style controls for Grand Theft Auto: Liberty City Stories, with optional analog acceleration and braking.
 comment=Built for the original PS2 default control scheme. Changing the in-game control type can produce different results.
-comment=Enable group 1 for vehicle controls and group 2 for the GTA III-style on-foot controls.
-comment=Vehicle layout: L2 brake, R2 accelerate, L1 fire, R1 handbrake, Cross handbrake, Square look left, Circle look right, R3 look behind, D-pad Up vehicle sub-mission/misc, D-pad Right next station/radio.
-comment=On-foot layout: R1 center camera, R2 fire, L2 aim, D-pad Left previous weapon, D-pad Right or L1 next weapon. Circle remains native/fire; D-pad Up/Down and R3 remain native.
-comment=Analog vehicle acceleration/braking: full-range R2/L2 pressure, with stock on-foot and pause-menu processing. Requires analog trigger bindings in PCSX2.
+comment=Group 1 enables the complete modern vehicle and on-foot control layout. Group 2 optionally enables full-range analog R2/L2 vehicle pedals.
+comment=The pause menu always receives native stock controller input.
+comment=Analog pedals require PCSX2 L2/R2 bindings to analog trigger axes.
+comment=Fully shut down and restart the game after changing the analog-pedal option. Avoid loading a save state made with a different option selection.
 comment=Target: NTSC-U SLUS-21423, CRC 7EA439F5.
 comment=Public credit: Zeroable.
 comment=Control-remapping foundation based on PS2 Controller Remapper by pelvicthrustman.
 
-[GTA-PS2-Modern-Controls\Definitive Edition Controls\1 REQUIRED - Definitive Edition vehicle controls]
-description=Required vehicle controls. In vehicles: L2 brake, R2 accelerate, L1 fire, R1 or Cross handbrake, Square/Circle look left/right, R3 looks behind, D-pad Up activates the vehicle sub-mission or special action, and D-pad Right selects the next radio station. Native D-pad Left/Down are suppressed during gameplay. The pause menu always uses stock controls. On-foot controls remain stock unless group 2 is enabled.
+[GTA-PS2-Modern-Controls\Definitive Edition Controls\1 REQUIRED - Definitive Edition controls]
+description=Complete modern control layout. Vehicles: L2 brake, R2 accelerate, L1 fire, R1 or Cross handbrake, Square/Circle look left/right, R3 look behind, D-pad Up vehicle sub-mission/special action, and D-pad Right next radio station. Native D-pad Left/Down are suppressed in vehicles. On foot: R1 centers the camera, R2 fires, L2 aims, D-pad Left selects the previous weapon, and D-pad Right or L1 selects the next weapon. Circle, D-pad Up/Down, and R3 retain their native actions. Pause menus use stock controls.
 author=Zeroable
 
 patch=1,EE,200FD050,extended,00C0C821
 patch=1,EE,200FD054,extended,080D81DB
 patch=1,EE,200FD058,extended,24030070
-
 patch=1,EE,200FD05C,extended,87240002
 patch=1,EE,200FD060,extended,3485EFF4
 patch=1,EE,200FD064,extended,93260012
@@ -94,77 +91,26 @@ patch=1,EE,200FD178,extended,30A5FBFF
 patch=1,EE,200FD17C,extended,A32E0010
 patch=1,EE,200FD180,extended,03E00008
 patch=1,EE,200FD184,extended,A7250002
-
 patch=1,EE,200FD200,extended,3C08003E
 patch=1,EE,200FD204,extended,8D099CB4
 patch=1,EE,200FD208,extended,1520001D
 patch=1,EE,200FD20C,extended,00000000
 patch=1,EE,200FD210,extended,0803F417
 patch=1,EE,200FD214,extended,00000000
-
 patch=1,EE,200FD240,extended,3C08003E
 patch=1,EE,200FD244,extended,8D099CB4
 patch=1,EE,200FD248,extended,1520000D
 patch=1,EE,200FD24C,extended,00000000
 patch=1,EE,200FD250,extended,0803F600
 patch=1,EE,200FD254,extended,00000000
-
 patch=1,EE,200FD280,extended,03E00008
 patch=1,EE,200FD284,extended,00000000
 patch=1,EE,D03D989A,extended,02100000
 patch=1,EE,20360764,extended,0803F414
 patch=1,EE,203607CC,extended,0803F480
-
 patch=1,EE,D03D989A,extended,02000000
 patch=1,EE,20360764,extended,24030070
 patch=1,EE,203607CC,extended,03E00008
-
-
-// Analog vehicle pedals: bypass 4x Cross/Square pressure gain and 150/255 minimum throttle.
-// Hooks retain stock processing on foot, while paused, and for the second controller.
-patch=1,EE,200FDC00,extended,3C08003E
-patch=1,EE,200FDC04,extended,9509989A
-patch=1,EE,200FDC08,extended,11200008
-patch=1,EE,200FDC0C,extended,00000000
-patch=1,EE,200FDC10,extended,8D099CB4
-patch=1,EE,200FDC14,extended,15200005
-patch=1,EE,200FDC18,extended,00000000
-patch=1,EE,200FDC1C,extended,16600003
-patch=1,EE,200FDC20,extended,00000000
-patch=1,EE,200FDC24,extended,03E00008
-patch=1,EE,200FDC28,extended,00000000
-patch=1,EE,200FDC2C,extended,0805BE1C
-patch=1,EE,200FDC30,extended,00000000
-patch=1,EE,200FDC80,extended,3C08003E
-patch=1,EE,200FDC84,extended,9509989A
-patch=1,EE,200FDC88,extended,1120000B
-patch=1,EE,200FDC8C,extended,00000000
-patch=1,EE,200FDC90,extended,8D099CB4
-patch=1,EE,200FDC94,extended,15200008
-patch=1,EE,200FDC98,extended,00000000
-patch=1,EE,200FDC9C,extended,3C0A0041
-patch=1,EE,200FDCA0,extended,254A8C60
-patch=1,EE,200FDCA4,extended,148A0004
-patch=1,EE,200FDCA8,extended,00000000
-patch=1,EE,200FDCAC,extended,8482002A
-patch=1,EE,200FDCB0,extended,0805C6F4
-patch=1,EE,200FDCB4,extended,00000000
-patch=1,EE,200FDCB8,extended,8484002A
-patch=1,EE,200FDCBC,extended,14800003
-patch=1,EE,200FDCC0,extended,00000000
-patch=1,EE,200FDCC4,extended,0805C6E8
-patch=1,EE,200FDCC8,extended,00000000
-patch=1,EE,200FDCCC,extended,0805C6E4
-patch=1,EE,200FDCD0,extended,00000000
-patch=1,EE,20170644,extended,0C03F700
-patch=1,EE,20170654,extended,0C03F700
-patch=1,EE,20171B88,extended,0803F720
-patch=1,EE,20171B8C,extended,00000000
-
-[GTA-PS2-Modern-Controls\Definitive Edition Controls\2 OPTIONAL - Definitive Edition on-foot controls]
-description=Requires group 1. On foot: R1 centers the camera, R2 fires, L2 aims, D-pad Left selects the previous weapon, and both D-pad Right and L1 select the next weapon. Circle remains native/fire, while D-pad Up/Down and R3 stay native. The pause menu always uses stock controls.
-author=Zeroable
-
 patch=1,EE,200FD800,extended,87240002
 patch=1,EE,200FD804,extended,34850FA0
 patch=1,EE,200FD808,extended,93260011
@@ -211,7 +157,50 @@ patch=1,EE,200FD8A8,extended,30A5FDFF
 patch=1,EE,200FD8AC,extended,A3290013
 patch=1,EE,200FD8B0,extended,03E00008
 patch=1,EE,200FD8B4,extended,A7250002
-
 patch=1,EE,D03D989A,extended,02000000
 patch=1,EE,20360764,extended,0803F414
 patch=1,EE,203607CC,extended,0803F490
+
+[GTA-PS2-Modern-Controls\Definitive Edition Controls\2 OPTIONAL - Analog acceleration and braking]
+description=Optional. Requires Group 1. Enables full-range proportional R2 acceleration and L2 braking/reverse in vehicles. Removes the stock pedal pressure scaling and minimum-throttle behavior. On-foot and pause processing remain stock. Bind L2/R2 to analog trigger axes in PCSX2, then fully restart the game after enabling or disabling this option.
+author=Zeroable
+
+// Optional analog vehicle pedals: full-range R2/L2 pressure while driving.
+patch=1,EE,200FDC00,extended,3C08003E
+patch=1,EE,200FDC04,extended,9509989A
+patch=1,EE,200FDC08,extended,11200008
+patch=1,EE,200FDC0C,extended,00000000
+patch=1,EE,200FDC10,extended,8D099CB4
+patch=1,EE,200FDC14,extended,15200005
+patch=1,EE,200FDC18,extended,00000000
+patch=1,EE,200FDC1C,extended,16600003
+patch=1,EE,200FDC20,extended,00000000
+patch=1,EE,200FDC24,extended,03E00008
+patch=1,EE,200FDC28,extended,00000000
+patch=1,EE,200FDC2C,extended,0805BE1C
+patch=1,EE,200FDC30,extended,00000000
+patch=1,EE,200FDC80,extended,3C08003E
+patch=1,EE,200FDC84,extended,9509989A
+patch=1,EE,200FDC88,extended,1120000B
+patch=1,EE,200FDC8C,extended,00000000
+patch=1,EE,200FDC90,extended,8D099CB4
+patch=1,EE,200FDC94,extended,15200008
+patch=1,EE,200FDC98,extended,00000000
+patch=1,EE,200FDC9C,extended,3C0A0041
+patch=1,EE,200FDCA0,extended,254A8C60
+patch=1,EE,200FDCA4,extended,148A0004
+patch=1,EE,200FDCA8,extended,00000000
+patch=1,EE,200FDCAC,extended,8482002A
+patch=1,EE,200FDCB0,extended,0805C6F4
+patch=1,EE,200FDCB4,extended,00000000
+patch=1,EE,200FDCB8,extended,8484002A
+patch=1,EE,200FDCBC,extended,14800003
+patch=1,EE,200FDCC0,extended,00000000
+patch=1,EE,200FDCC4,extended,0805C6E8
+patch=1,EE,200FDCC8,extended,00000000
+patch=1,EE,200FDCCC,extended,0805C6E4
+patch=1,EE,200FDCD0,extended,00000000
+patch=1,EE,20170644,extended,0C03F700
+patch=1,EE,20170654,extended,0C03F700
+patch=1,EE,20171B88,extended,0803F720
+patch=1,EE,20171B8C,extended,00000000
